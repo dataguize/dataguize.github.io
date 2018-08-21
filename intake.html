@@ -132,14 +132,16 @@ h5 {
     <h1 class="baseintro__title">CMI NOVACAST</h1>
     <p class="baseintro__para">Dataguize Client Questionnaire  <span style="font-size: 1.75vh;color: #ccc;">**Please answer each question to the best of your ability</span></p>
   </header>
-  <form class="baseform">
+	<form action="/contact-success.html" method="post" class="contact-form ">
+			<input type="hidden" name="_to" value="dataguize@gmail.com">
+			<input type="text" name="_gotcha" style="display: none;">
     <!-- 01. Shrinking Labels-->
     <div class="baseform__set baseform__set--shrinkinglabels">
       <h2 class="baseform__title--subset">01. What is your name</h2>
       <p class="baseform__para--subset">Please provide your full name</p>
       <label class="baseform__label"> 
-        <input class="baseform__txtinput" type="text" required="required"/>
-        <div class="baseform__txtlabel">Type your name here?</div>
+        <input class="baseform__txtinput" type="text" required="required" type="name" name="name" id="namez" placeholder="" required/>
+        <div class="baseform__txtlabel">Type your name here</div>
       </label>
     </div>
     <!-- 02. Shrinking Labels-->
@@ -147,7 +149,7 @@ h5 {
       <h2 class="baseform__title--subset">02. What is your email address</h2>
       <p class="baseform__para--subset">Please enter your current email.</p>
       <label class="baseform__label"> 
-        <input class="baseform__txtinput" type="text" required="required"/>
+        <input class="baseform__txtinput" type="text"  name="email" id="email" placeholder=" " required="required"/>
         <div class="baseform__txtlabel">Email@email.com</div>
       </label>
     </div>
@@ -159,7 +161,7 @@ h5 {
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please describe here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="descBiz" id="descBiz" type="text" rows='10' cols="30" placeholder="Please describe here"  required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -172,7 +174,7 @@ h5 {
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please describe here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="descAds" id="descAds" type="text" rows='10' cols="30" placeholder="Please describe here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -185,7 +187,7 @@ Dataguize offer a comprehensive Logo, Signage and Printed Media design service t
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="brandId" id="brandId" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -197,7 +199,7 @@ Dataguize offer a comprehensive Logo, Signage and Printed Media design service t
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="compet" id="compet" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -210,7 +212,7 @@ Dataguize offer a comprehensive Logo, Signage and Printed Media design service t
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="explainwhy" id="explainwhy" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -223,7 +225,7 @@ Dataguize offer a comprehensive Logo, Signage and Printed Media design service t
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="budget" id="budget" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -236,7 +238,7 @@ Dataguize offer a comprehensive Logo, Signage and Printed Media design service t
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput"  name="deadline" id="deadline" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -250,7 +252,7 @@ Dataguize offers a keyword research service where we identify the most appropria
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="phraseSeo" id="phraseSeo" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -263,7 +265,7 @@ Dataguize offers a keyword research service where we identify the most appropria
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="ideaweb" id="ideaweb" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -277,7 +279,7 @@ Dataguize offers a keyword research service where we identify the most appropria
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="looklike" id="looklike" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -290,7 +292,7 @@ Dataguize offers a keyword research service where we identify the most appropria
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="socials" id="socials" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -298,12 +300,12 @@ Dataguize offers a keyword research service where we identify the most appropria
 
     <!-- 14. Shrinking Labels-->
     <div class="baseform__set baseform__set--shrinkinglabels  ">
-      <h2 class="baseform__title--subset">14. Do you want to include share/like buttons for the popular social networking pages on each page of your site?</h2>
+      <h2 class="baseform__title--subset">14. Do you want to include share/like buttons for the popular social networking pages on each page of your site? Which ones?</h2>
       <p class="baseform__para--subset" style="font-size: 1em;">Social bookmarks are a powerful tool in marketing your website by allowing 1 click linking to your site for your visitors.</p>
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput"  name="likebutton" id="likebutton" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -316,7 +318,7 @@ Dataguize offers a keyword research service where we identify the most appropria
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" name="specifics" id="specifics" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
@@ -324,18 +326,21 @@ Dataguize offers a keyword research service where we identify the most appropria
 
     <!-- 16. Shrinking Labels-->
     <div class="baseform__set baseform__set--shrinkinglabels  ">
-      <h2 class="baseform__title--subset">16. How often will your site be updated and do you need to be able to make frequent updates yourself?</h2>
+      <h2 class="baseform__title--subset">16. How often will your site be updated and will there be frequent updates (every week?, month? year?)</h2>
       <p class="baseform__para--subset" style="font-size: 1em;">Websites are programmed in html and other code and are not normally updatable by their owners unless they have some web design knowledge. However, a website can be designed with a Content Management System (CMS) to allow authorised users a secure way of adding and updating content with no web design knowledge.
-Dataguize offers a complete website maintenance and updating service for all our web design clients. We will make any updates that you require for your website; or we can build in a CMS if you want to be able to do this yourself.</p>
+Dataguize offers a complete website maintenance and updating service for all our web design clients. We will make any updates that you require for your website.</p>
       <label class="baseform__label"> 
         <textarea style="-moz-box-shadow: 0px 0px 4px 1px #09334f;
     -webkit-box-shadow: 0px 0px 4px 1px #09334f ;
-    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+    box-shadow: 0px 0px 4px 1px  #09334f;" class="baseform__txtinput"  type="text" rows='10' cols="30"  name="crm" id="crm" placeholder="Please enter text here" required="required"/></textarea>
         <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
       </label>
     </div>
     <!-- 16. 'Negitive' Feedback - Give Them Details-->
-
+    <br>
+    <br>
+     <input type="submit" value="Submit My Answers" style='font-size:3.2vh;margin-left:33%;'>
+     <br><br>
 
   </form>
 </div>
