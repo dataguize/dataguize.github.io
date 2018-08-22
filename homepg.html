@@ -1,0 +1,1396 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js"></script>
+<script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+<link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
+   <!-- Bootstrap and Font Awesome css -->
+     
+
+<title>Dataguize New Client Intake Questionnaire</title>
+
+<style>
+/**/
+
+
+body {
+  background-image: url(https://dl2.pushbulletusercontent.com/yhRR7wsDB6LhTvFaVlAmeopVBYkFyMJU/dataguizescrnsht.jpeg);
+  font-family: "Catamaran", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#header, #footer{
+    position:fixed;
+    height: 50px;
+    display:block;
+    width: 100%;
+    z-index:9;
+    text-align:center;
+    color: #f2f2f2;
+    padding: 20px 0 0 0;
+  }
+
+/* Centered texts in each section
+  * --------------------------------------- */
+.hide-lightbox {
+  display:none;
+}
+iframe#videoInModal {
+    height: 500px;
+    margin-top: 20px;
+    width: 850px;
+}
+
+.section {
+  text-align: center;
+}
+.inner-section-parent {
+  margin:0 auto;
+  position:relative;
+  max-width:1200px;
+ vertical-align: middle;
+
+}
+#main-logo {
+  cursor:pointer;
+}
+
+#home-top,
+.gradient-bg, body {
+
+  background: #01a2ba;
+  background: -moz-linear-gradient(
+    -45deg,
+    #01a2ba 0%,
+    #01a2ba 36%,
+    #019bbb 57%,
+    #0175bf 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #01a2ba 0%,
+    #01a2ba 36%,
+    #019bbb 57%,
+    #0175bf 100%
+  );
+  background: linear-gradient(
+    135deg,
+    #01a2ba 0%,
+    #01a2ba 36%,
+    #019bbb 57%,
+    #0175bf 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#01a2ba",
+      endColorstr="#0175bf",
+      GradientType=1
+    );
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    display: block;
+    z-index: 50;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+}
+nav .logo {
+  float: left;
+  display: block;
+}
+nav .logo img {
+  width: 280px;
+}
+nav ul {
+    padding-left: 0;
+    list-style: none;
+    float: right;
+    position: relative;
+    /* right: 60px; */
+    margin-top: 20px;
+}
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 5px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  transition:all .25s ease-in-out;
+}
+
+.active {
+/*  background:green; */
+}
+
+.white-bg {
+  
+}
+.white-bg a{
+  color:#1bacce;
+}
+.bg-none {
+  background:none;
+  background-color:none!important;
+  background:none;
+}
+
+/* .white-bg .logo img{
+  fill:#1bacce;
+} */
+
+nav li a:hover {
+  color: #00c2f2;
+}
+
+.req-demo-btn a {
+  border: 2px solid #00c2f2;
+  border-radius: 50px;
+  background: #00c2f2;
+  color: white;
+}
+.req-demo-btn a:hover {
+  color:white;
+}
+hide-mobile {
+  display:block;  
+}
+
+.show-mobile {
+  display:none;
+}
+/* THREE JS BG STYLES*/
+#canvas {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+  max-width:100%;
+}
+
+
+/*Slides TOP*/
+.scroll-help {
+  position: absolute;
+      top: 69vh;
+      color: white;
+      left: 0;
+      right: 0;
+      text-align: center;
+}
+.scroll-help img{
+  max-width: 20px;
+}
+.scroll-help {
+  
+}
+
+.top-static-bg {
+
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    width: max-content;
+    max-width: 100%;
+}
+.top-static-bg  img{
+  max-width: 100%;
+}
+
+.top-slider-container .swiper-slide{
+  background:none;
+}
+
+.top-slide-left {
+  max-width: 400px;
+  color:white;
+  text-align:left;
+  padding-right:10px;
+  margin-right: 40px;
+  float:left;
+}
+.top-slide-left h4{
+  font-size:2rem;
+  margin-bottom:0px;
+}
+.top-slide-left h2{
+  font-size:5rem;
+  margin:0;
+  line-height:1;
+  margin-bottom: 10px;
+}
+.top-slide-left p{
+  line-height:1.5;
+  font-size:1.2rem;
+  margin-top:0px;
+  margin-bottom:50px;
+}
+.top-slider-button {
+  background: #4f4f4f;
+  color: white!important;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 18px 30px 20px;
+  border: 0px;
+  height: inherit;
+  letter-spacing: 1px;
+  text-transform:  uppercase;
+  text-decoration:none;
+}
+.top-slider-button:hover {
+  background: #2d2d2d;
+}
+
+.slide-right-img-container {
+  width:inherit;  
+}
+.top-slide-right {
+  float:left;
+}
+
+.top-slide-right img{
+  max-width:;
+  position:relative;
+  transform: translate3d(0,0,0);
+}
+
+.slide-title {
+      position: absolute;
+    top: 80px;
+}
+
+/* ============ Slide Colors  ============ */
+.analytics-slide, #section1 {
+  background: #00ff7438;
+}
+
+.maps-slide, #section2 {
+  background: #0087ff38;
+}
+
+.collab-slide, #section3 {
+/*  background: #00ff7438; */
+}
+
+.smart-map-slide, #section4 {
+  background: #00ff7438;
+}
+.maps-slide img {
+   filter: drop-shadow(0px 15px 13px rgba(0,0,0,.3));
+}
+
+/*Contact/Request*/
+.request-slide-parent {
+  margin: 20px auto!important;
+}
+.contact-agree {
+  color:white;
+  margin:20px auto!important
+}
+.request-slide-container {
+    max-width: 1200px;
+    padding-top: 120px;
+      height: 100%;
+    position: relative;
+}
+.request-slide-container h4{
+  font-size:1.75rem;
+  color:white;
+  margin:0;
+}
+.contact-left {
+  width:45%;
+  display:inline-block;
+  vertical-align:top;
+  position:left;
+}
+.contact-left p{
+  line-height:1;
+  margin:10px 0;
+  color:white;
+}
+.contact-left a {
+  line-height:1;
+  margin:10px 0;
+  color:white;
+  text-decoration: none;
+}
+.contact-right {
+  width:45%;
+  display:inline-block;
+}
+.form-container {
+  padding:20px;
+}
+.form-container input{
+  width:90%;
+  padding:10px 20px;
+  border:none;
+  border-radius:50px;
+  margin:10px 0;
+}
+.form-container textarea{
+  width:90%;
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  margin:10px 0;
+}
+.form-container select{
+  width:95%;
+  padding:10px 20px;
+  border:none;
+  border-radius:50px;
+  margin:15px 0;
+}
+.contact-right h4{
+  margin:0;
+}
+.contact-right p{
+  margin:0;
+  line-height:1;
+  color:white;
+}
+
+.contact-right a{
+  color:white;
+  text-decoration:underline;
+}
+
+.contact-right button{
+  margin:0;
+  border-radius: 50px;
+  background: #00c2f2;
+  font-size: 1rem;
+  border:0;
+  padding:10px 20px;
+  color:white;
+}
+
+.contact-map-responsive {
+  margin-top: 40px;
+  /* max-width: 250px; */
+  text-align: center;
+  position: relative;
+}
+
+.contact-map-responsive iframe{
+  max-height: 355px;
+}
+
+.contact-map-responsive video {
+    margin: 0 auto;
+    display: block;
+    max-width: 300px;
+    width: 250px;
+    z-index: 1;
+    /* margin-left: -10px; */
+    position: relative;
+    left: -3%;
+    /* filter: contrast(20%); */
+    opacity: .80;
+}
+
+.contact-map-responsive .logo-img {
+    z-index: 2;
+    position: absolute;
+    width: 290px;
+    left: -15px;
+    right: 0;
+    top: 160px;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-left .top-slider-button{
+  position: relative;
+    top: 70px;
+    left: 0;
+    right: 0;
+    max-width: 200px;
+    margin: 0 auto;
+}
+   
+/*FOOTER*/
+.footer a:visited, .footer a, request-slide-container a {
+  color:white;
+  text-decoration:none;
+}
+.footer {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 1200px;
+    height: 120px;
+    display: block;
+    margin-top: 0;
+    padding-top: 0;
+}
+.footer-left {
+  float:left;
+  text-align:left;
+}
+.footer-right {
+  text-align:right;
+  float:right;
+}
+.legal-footer {
+     list-style: none;
+    font-weight: 400;
+    margin-left: 0;
+    margin-bottom: 5px;
+      padding-left: 0;
+    color: white;
+}
+ul.legal-footer li{
+  display:inline-block;
+}
+ul.legal-footer li:first-child{
+  border-right:1px solid white;
+  padding-right:10px;
+  margin-right:5px;
+}
+ul.legal-footer li a{
+  color:white;
+}
+
+.logo-img {
+  width: 180px;
+  filter: contrast(120%);
+  display: inline-block;
+}
+.copyright {
+  color:white;
+}
+.footer-link-to-main {
+  line-height: 2;
+    font-weight: 400;
+    margin-bottom: 5px;
+    display: block;
+    margin-top: 16px;
+}
+
+.footer-link-to-main img{
+  margin-right:10px;
+}
+/*SOCIAL Footer*/
+.social-footer {
+  list-style: none;
+  padding-left:  0;
+  margin-left:  0;
+  margin-top: 0px;
+  margin-bottom:  0;
+  padding-bottom: 0;
+}
+.social-footer li {
+  display: inline-block;
+  margin-right: 23px;
+}
+.social-footer li:last-child {
+  display: inline-block;
+  margin-right: 0;
+}
+.social-footer li a{
+  color:white;
+}
+.social-footer li a img{
+  max-width: 30px;
+  opacity:1;
+  width: 30px;
+  height: 30px;
+}
+.social-footer li a:hover img{
+  opacity:.75;
+}
+
+button.featherlight-close-icon.featherlight-close {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+}
+/* ============ ANIMATIONS  ============ */
+.puff-in-center{-webkit-animation:puff-in-center 1.5s cubic-bezier(.47,0.000,.745,.715) both;animation:puff-in-center 1.5s cubic-bezier(.47,0.000,.745,.715) both}
+
+/**
+ * ----------------------------------------
+ * animation puff-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+.slide-in-fwd-center {
+  -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+          animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+/**
+ * ----------------------------------------
+ * animation slide-in-fwd-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: perspective(500px) translateZ(-1400px);
+            transform: perspective(500px) translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform:  perspective(500px)translateZ(0);
+            transform:  perspective(500px)translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: perspective(500px) translateZ(-1400px);
+            transform: perspective(500px) translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform:  perspective(500px)translateZ(0);
+            transform:  perspective(500px)translateZ(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-in-bck-center {
+  -webkit-animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bck-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.bounce-top {
+  -webkit-animation: bounce-top 5s ease-in-out infinite alternate both;
+          animation: bounce-top 5s ease-in-out infinite alternate both;
+}
+/*
+ * ----------------------------------------
+ * animation bounce-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * Media Quaries
+ * ----------------------------------------
+ */ 
+@media (max-width:780px) {
+  .inner-section-parent {
+    height: 100%
+  }
+  .top-slide-right {
+      float: none;
+  }
+  .top-slide-left {
+    position: absolute;
+    bottom: 3vh;
+    text-align: center;
+    max-width: 85%;
+    margin-right: 0;
+    padding-right: 0;
+    float: none;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .first-slide .top-slide-left{
+     bottom: 12vh;
+  }
+  .top-slide-left h2 {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 5;
+  }
+  .top-slide-left h4 {
+    font-size: 1.5rem;
+    z-index: 5;
+    position: relative;
+  }
+  .top-slide-left p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .top-slider-button {
+    /* position:absolute; */
+    position: relative;
+    bottom: -20px;
+    /* width: 300px; */
+  }
+
+  .top-slide-right {
+    position: absolute;
+    top: 12vh;
+    padding:20px;
+    float: none;
+    left: 0;
+    right: 0;
+  }
+  .top-slide-right img{
+    max-width:100%;
+    z-index: 1;
+  }
+  #main-logo {
+    max-width: 160px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 10px;
+  }
+  nav {
+    margin-top:  0;
+  }
+  nav ul{
+    padding: 0;
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-bottom: 17px;
+    top: 35px;
+    /* border-bottom: 1px solid #00c1f0; */
+  }
+  nav a{
+    font-size: .8rem;
+    /* position: relative; */
+    /* top: 40px; */
+  }
+  .hide-mobile {
+    display:none; 
+  }
+
+  .show-mobile {
+    display:block;
+  }
+  
+  
+  .contact-left {
+    width:100%;
+    display:inline-block;
+    vertical-align:top;
+  }
+  .contact-right {
+    width:100%;
+    display:inline-block;
+  }
+  .form-container {
+    padding:20px;
+    
+  }
+  .scroll-help {
+    position: absolute;
+    bottom: 1vh;
+    top: unset;
+    color: white;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: .75rem;
+  }
+
+}
+</style>
+</head>
+<body>
+<!-- Static Navigation -->
+
+<!-- Static Navigation -->
+<div id="canvas" style="position: relative;transform: translateY(5%);padding-top: 7%;">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
+</div>
+<div class="top-static-bg puff-in-center">
+  <img src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/I6dmKeUR5YSx4Pe/dgfinalfinal6.png" alt="">
+</div>
+
+<div id="fullpage">
+  <div class="section bg-none" id="section0">
+    <div class="inner-section-parent first-slide">
+      <div class="top-slide-left">
+        <h4>Explore the Power of</h4>
+        <h2>AI + VR</h2>
+        <p>Visualize and understand your data as never before thanks to our innovative use of Machine Learning, immersive visualization and collaborative analysis. </p>
+        <a class="top-slider-button" href="#" data-featherlight="#videoInModal">Watch the Video</a>
+      </div>
+      <div class="top-slide-right">
+        <div class="slide-right-img-container slide-in-fwd-center">
+          <img class="" src="http://malachisimonyan.com/uploads/v-temp/vrslide.png" alt="">
+        </div>
+      </div>
+      
+      <div class="hide-lightbox" id="videoInModal">
+        <iframe id="videoInModal" width="100%" height="" src="https://www.youtube.com/embed/YkoTfENJxL4?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer?origin=https://docs.virtualitics.com/" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
+      </div>
+
+
+    </div>
+</div>
+
+<div class="section" id="section1">
+  <div class="inner-section-parent">
+    <div class="top-slide-left">
+      <h4>Experience our</h4>
+      <h2>Immersive Analytics</h2>
+      <p>Full collaboration capabilities across multiple devices: run your analysis on Desktop, Mobile and in Virtual Reality. </p>
+      
+    </div>
+    <div class="top-slide-right">
+      <div class="slide-right-img-container">
+        <img class="" src="http://malachisimonyan.com/uploads/v-temp/plat-monitor.png" alt="">
+      </div>
+    </div>
+    </div>
+</div>
+  
+<div class="section" id="section2">
+  <div class="inner-section-parent">
+    <div class="top-slide-left">
+      <h4>Explore Data using</h4>
+      <h2>Innovative Maps</h2>
+      <p>Look at your geolocated data in a novel way thanks to our interactive maps: visualize on 2D maps or 3D globe!</p>
+    </div>
+    <div class="top-slide-right">
+      <div class="slide-right-img-container">
+        <img class="" src="http://malachisimonyan.com/uploads/v-temp/slidemaps.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="section" id="section3">
+  <div class="inner-section-parent">
+    <div class="top-slide-left">
+      <h4>Engage & Share using</h4>
+      <h2>Collaborative Analysis</h2>
+      <p>SVO – Shared Virtual Office™: collaborative and fully customizable shared space to analyze data, build VR dashboards, present and discuss insights. </p>
+    </div>
+    <div class="top-slide-right">
+      <div class="slide-right-img-container ">
+        <img class="" src="http://malachisimonyan.com/uploads/v-temp/slidemaps-final.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="section" id="section4">
+  <div class="inner-section-parent">
+    <div class="top-slide-left">
+      <h4>AI-explainability and</h4>
+      <h2>Smart Mapping</h2>
+      <p>Load your data and let our software build insights and visualizations for you. Unlock the Machine Learning black box!</p>
+      <!--                <a class="top-slider-button" href="">Request a Demo</a> -->
+    </div>
+    <div class="top-slide-right">
+      <div class="slide-right-img-container ">
+        <img class="" src="http://malachisimonyan.com/uploads/v-temp/vrslide.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<div class="section request-slide-parent" id="section5">
+  <div class="request-slide-container inner-section-parent">
+
+
+    <div class="contact-right">
+      <h4>Request a Demo</h4>
+      <p>To get in touch with us or to request a demo of our products: fill in the form or send an email to "info at virtualitics.com". </p>
+      <div class="form-container">
+        <form action="">
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Company">
+          <input type="text" placeholder="Role">
+          <input type="number" placeholder="Phone">
+
+          <select name="Purpose of Contact" title="Purpose of Contact">
+              <option value="">Purpose of Contact*</option>
+              <option>Request a Demo</option>
+              <option>Press</option>
+              <option>Investors</option>
+              <option>Jobs</option>
+              <option>Technical Support</option>
+              <option>Other</option>
+            </select>
+
+          <textarea name="" id="" cols="30" rows="5"></textarea>
+          <button type="submit">Submit</button>
+          <p class="contact-agree">By submitting this form you agree to our <a href="#" data-featherlight="#privacyLightbox"  title="">terms of use</a> and our <a data-featherlight="#termsLightbox" href="#"  title="">privacy policy</a>.</p>
+        </form>
+      </div>
+    </div>
+
+  </div><!-- End Inner Contact Container-->
+  
+  <div class="footer">
+    <div class="footer-left">
+      <ul class="legal-footer">
+      <li><a href="#" data-featherlight="#privacyLightbox" title="">Privacy</a></li>
+      <li><a href="#" data-featherlight="#termsLightbox" title="">Terms of Use</a></li>
+    </ul>
+    <p class="copyright">
+      <a href="https://virtualitics.com" title=""><img src="https://docs.virtualitics.com/wp-content/themes/docs-virtualitics/img/web-logo.svg" alt="Logo" class="logo-img"></a><br> © Copyright 2018 Virtualitics, Inc, 600 S. Lake Avenue Suite 104 Pasadena, CA 91106
+    </p>
+    </div>
+    
+    <div class="footer-right">
+
+              <!-- Link to main site -->
+              <a href="https://www.virtualitics.com" title="" class="footer-link-to-main">
+                <!--<span><img src="https://docs.virtualitics.com/wp-content/themes/docs-virtualitics/img/v-link.png" alt="Logo" class=""></span>-->www.virtualitics.com
+              </a>
+
+              <!-- social -->
+              <ul class="social-footer">
+                <li>
+                  <a href="https://www.facebook.com/virtualitics" target="_blank" title="">
+                    <img src="https://docs.virtualitics.com/wp-content/themes/docs-virtualitics/img/icons/fb.svg" alt="Logo" class="logo-img">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/virtualiticsVR" target="_blank" title="">
+                    <img src="https://docs.virtualitics.com/wp-content/themes/docs-virtualitics/img/icons/tw.svg" alt="Logo" class="logo-img">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/company/virtualitics-llc/" target="_blank" title="">
+                    <img src="https://docs.virtualitics.com/wp-content/themes/docs-virtualitics/img/icons/in.svg" alt="Logo" class="logo-img">
+                  </a>
+                </li>
+              </ul>
+              <!-- /social -->
+    </div>
+    
+    <div class="hide-lightbox" id="privacyLightbox">
+      <div class=" pagina">
+<h2><strong>VIRTUALITICS, INC. PRIVACY POLICY</strong></h2>
+<p>
+<strong>Last Updated: May&nbsp;29, 2018</strong><br>
+</p>
+<p>This Privacy Policy explains how Virtualitics, Inc. (“Virtualitics”) collects, uses, and discloses information about you through its website, software application (the “Software”) and other online products and services (collectively, the “Services”) or when you otherwise interact with us.</p>
+<p>We may change this Privacy Policy from time to time.&nbsp; If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide you with additional notice (such as adding a statement to our homepage or sending you a notification).&nbsp; We encourage you to review the Privacy Policy whenever you access the Services or otherwise interact with us to stay informed about our information practices and the choices available to you.</p>
+<table width="">
+<tbody>
+<tr>
+<td width="">
+<h3>Collection of Information</h3>
+<p>            <strong>Information You Provide to Us</strong></p>
+<p>            <em>We collect information you provide directly to us.&nbsp; For example, we collect information when you create an account, participate in any interactive features of the Services, fill out a form, purchase a license to the Software, request customer support or otherwise communicate with us.&nbsp; The types of information we may collect include your name, email address, company or employer information, financial information in connection with purchasing a Software license, job title, phone number and any other information you choose to provide. </em></p>
+<p>            <strong>Information About Your Use of the Services</strong></p>
+<p>            <em>Usage Information</em></p>
+<p>            We collect information about your use of the Services, such as Software functionality and analytics (with your consent) and the amount of data transferred in using our Services<em>. </em></p>
+<p>            <em>Automatically Collected Information </em></p>
+<p>            When you access or use our Services, we automatically collect information about you, including:</p>
+<li><strong>Log Information:</strong>&nbsp; We collect log information about your use of the Services, including the type of browser you use, Software version, access times, pages viewed, your IP address, and your MAC address.</li>
+<li><strong>Device Information:&nbsp; </strong>We collect information about the computer or mobile device you use to access our Services, including the hardware model, operating system and version, unique device identifiers, and your MAC address.</li>
+<li><strong>Information Collected by Cookies and Other Tracking Technologies: </strong>We use different technologies to collect information, including cookies. &nbsp;Cookies are small data files stored on your hard drive or in device memory that help us improve our Services and your experience, see which areas and features of our Services are popular and count visits<em>.</em> For more information about cookies and how to disable them, please see “Your Choices” below.</li>
+</td>
+</tr>
+<tr>
+<td width="">
+<h3>Use of Information</h3>
+<p>            We use the information we collect to provide, maintain, and improve our Services, such as to register, administer, and secure your account and make the Services available to you. &nbsp;We may also use the information we collect to:</p>
+<li> Send you technical notices, updates, security alerts and support and administrative messages and to respond to your comments, questions and customer service requests;</li>
+<li> Communicate with you about releases, products, services, and offers;</li>
+<li> Monitor and analyze trends, usage and activities in connection with our Services;</li>
+<li> Detect, investigate, and prevent fraud and other illegal activities and protect the rights and property of Virtualitics and others;</li>
+<li> Personalize and improve the Services;</li>
+<li> Comply with our legal obligations;</li>
+<li> Enforce, or otherwise use in connection with, any terms governing use of our Services; and carry out any other purpose described to you at the time the information was collected.</li>
+</td>
+</tr>
+<tr>
+<td width="">
+<h3>Sharing of Information</h3>
+<p>            We will not share data except in the following circumstances:</p>
+<li> With other users of our Software at your direction or with your consent;</li>
+<li> With vendors, consultants and other service providers who need access to such information to carry out work on our behalf;</li>
+<li> In response to a request for information if we believe disclosure is in accordance with, or required by, any applicable law or legal process, including lawful requests by public authorities to meet national security or law enforcement requirements;</li>
+<li> If we believe your actions are inconsistent with our user agreements or policies, or to protect the rights, property and safety of Virtualitics or others;</li>
+<li> In connection with, or during negotiations of, any merger, sale of company assets, financing or acquisition of all or a portion of our business by another company;</li>
+<li> Between and among Virtualitics and our current and future parents, affiliates, subsidiaries and other companies under common control and ownership; and
+</li><li> With your consent or at your direction.</li>
+<p>            We may also share aggregated or de-identified information, which cannot reasonably be used to identify you.</p></td>
+</tr>
+<tr>
+<td width="">
+<h3>Advertising and Analytics Services Provided by Others</h3>
+<p>            We may allow others to provide analytics services and serve advertisements on our behalf across the internet and in applications.&nbsp; These entities may use cookies, web beacons, device identifiers and other technologies to collect information about your use of the Services and other websites and applications, including your IP address, web browser, mobile network information, pages viewed, time spent on pages or in apps, links clicked and conversion information.&nbsp; This information may be used by Virtualitics and others to, among other things, analyze and track data, determine the popularity of certain content, deliver advertising and content targeted to your interests on our Services and other websites and better understand your online activity.&nbsp; For more information about interest-based ads, or to opt out of having your web browsing information used for behavioral advertising purposes, please visit <a href="http://www.aboutads.info/choices">www.aboutads.info/choices</a>.&nbsp; If you are a resident of the EEA (defined below), you may have additional choices.&nbsp; Please visit <a href="http://youronlinechoices.eu/">http://youronlinechoices.eu/</a> for more information.</p></td>
+</tr>
+<tr>
+<td width="">
+<h3>Data Retention</h3>
+<p>            We store the information we collect about you for as long as is necessary for the purpose(s) for which we originally collected it.&nbsp; We may retain certain information for legitimate business purposes or as required by law.</p>
+<p>            &nbsp;</p></td>
+</tr>
+<tr>
+<td width="">
+<h3>Transfer of Information to the U.S. and Other Countries</h3>
+<p>            Virtualitics is based in the United States and we process and store information in the U.S<em>. </em>&nbsp;As such, we and our service providers may transfer your information to, or store or access it in, jurisdictions that may not provide equivalent levels of data protection as your home jurisdiction. &nbsp;We will take steps to ensure that your personal data receives an adequate level of protection in the jurisdictions in which we process it.</p></td>
+</tr>
+<tr>
+<td width="">
+<h3>Residents of the European Economic Area</h3>
+<p>            If you are a resident of the European Economic Area (“EEA”), you have certain rights and protections under the law regarding the processing of your personal data.</p>
+<p>            <strong>Legal Basis for Processing</strong></p>
+<p>            If you are a resident of the EEA, when we process your personal data we will only do so in the following situations:</p>
+<li> We need to use your personal data to perform our responsibilities under our contract with you (e.g., processing payments for and providing the Virtualitics Services you have requested).</li>
+<li> We have a legitimate interest in processing your personal data. For example, we may process your personal data to send you marketing communications, to communicate with you about releases or changes to our Services, and to provide, secure, and improve our Services.</li>
+<p>            <strong>Data Subject Requests</strong></p>
+<p>            If you are a resident of the EEA, you have the right to access personal data we hold about you and to ask that your personal data be corrected, erased, or transferred. &nbsp;You may also have the right to object to, or request that we restrict, certain processing.&nbsp; If you would like to exercise any of these rights, you may contact us as indicated below.</p>
+<p>            <strong>Questions or Complaints</strong></p>
+<p>            If you are a resident of the EEA and have a concern about our processing of personal data that we are not able to resolve, you have the right to lodge a complaint with the data privacy authority where you reside. &nbsp;For contact details of your local Data Protection Authority, please see: <a href="http://ec.europa.eu/justice/data-protection/article-29/structure/data-protection-authorities/index_en.htm">http://ec.europa.eu/justice/data-protection/article-29/structure/data-protection-authorities/index_en.htm</a>http://ec.europa.eu/justice/data-protection/article-29/structure/data-protection-authorities/index_en.htm.</p></td>
+</tr>
+<tr>
+<td width="">
+<h3>Your Choices</h3>
+<p>            <strong>Account Information</strong></p>
+<p>            You may update, correct or delete information about you at any time by emailing us at info@virtualitics.com.&nbsp; If you wish to deactivate your account, please email us at info@virtualitics.com, but note that we may retain certain information as required by law or for legitimate business purposes.&nbsp; We may also retain cached or archived copies of information about you in connection with our data retention policies.</p>
+<p>            <strong>Cookies</strong></p>
+<p>            Most web browsers are set to accept cookies by default.&nbsp; If you prefer, you can usually choose to set your browser to remove or reject browser cookies.&nbsp; Please note that if you choose to remove or reject cookies, this could affect the availability and functionality of some of our Services.</p>
+<p>            <strong>Promotional Communications </strong></p>
+<p>            You may opt out of receiving promotional emails from Virtualitics by following the instructions in those emails or by emailing us at info@virtualitics.com.&nbsp; If you opt out, we may still send you non-promotional emails, such as those about your account or our ongoing business relations.</p></td>
+</tr>
+<tr>
+<td width="">
+<h3>Contact Us</h3>
+<p>            If you have any questions about this Privacy Policy, please contact us at: Virtualitics Inc, 600 S Lake Ave #104, 91106, Pasadena (info@virtualitics.com) .
+        </p></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;
+ </p></div>
+    </div>
+    
+    <div class="hide-lightbox" id="termsLightbox">
+    <div class="">
+      <h1>Terms of Use</h1>
+      <h2>1. Binding Effect.</h2>
+      <p class="text-justify">These Terms of Use are a binding agreement (this “Agreement”)<br>
+      between you and Virtualitics, Inc. (the “Company”). By accessing the website located at&nbsp;<a href="https://www.virtualitics.com/">www.virtualitics.com</a>&nbsp;(the “Site”), you agree to abide by the terms of this Agreement, as they may be amended by the Company from time to time in its sole discretion. You agree that by using the site you represent that you are at least 18 years old and that you are legally able to enter into this agreement.</p>
+      <h2>2. Privacy Policy</h2>
+      <p class="text-justify">The Company respects your privacy and permits you to control the treatment of your personal information. A complete statement of the Company’s current privacy policy can be found by clicking the privacy Policy link on the Site. The Privacy Policy is expressly incorporated into this Agreement by this reference</p>
+      <h2>3. No Warranties</h2>
+      <p class="text-justify">The Company hereby disclaims all warranties. The Company is making the Site available “as is” without warranty of any kind. You assume the risk of any and all damage or loss from the use of, or inability to use, the Site. To the maximum extent permitted by law, Company expressly disclaims any and all warranties, express or implied, regarding the Site, including, but not limited to, any implied warranties of merchantability, fitness for a particular purpose, or non-infringement. The Company does not warrant that the Site will meet your requirements or that the operation of the Site will be uninterrupted or error-free.</p>
+      <h2>4. Limited Liability</h2>
+      <p class="text-justify">The Company’s liability to you is limited. To the maximum extent permitted by law, in no event shall the Company be liable for damages of any kind (including, but not limited to, special, incidental, or consequential damages, lost profits, or lost data, regardless of the foreseeability of those damages) arising out of or in connection with your use of the site or any other materials provided to you by the<br>
+      Company. This limitation shall apply regardless of whether the damages arise out of breach of contract, tort, or any other legal theory or form of action.</p>
+      <h2>5. Affiliated Sites</h2>
+      <p class="text-justify">The Company has no control over, and no liability for any third party websites or materials. The Company may work with a number of partners and affiliates whose websites may be linked with the Site. Because neither the Company nor the Site has control over the content and performance of these partner and affiliate sites, the Company makes no guarantees about the accuracy, currency, content, or quality of the information provided by such sites, and the Company assumes no responsibility for unintended, objectionable, inaccurate, misleading, or unlawful content that may reside on those sites. Similarly, from time to time in connection with your use of the Site, you may have access to content items (including, but not limited to, websites) that are owned by third parties. You acknowledge and agree that the Company makes no guarantees about,<br>
+      and assumes no responsibility for, the accuracy, currency, content, or quality of this third party content, and that, unless expressly provided otherwise, the terms of this Agreement shall govern your use of any and all third party content.</p>
+      <h2>6. Prohibited Uses.</h2>
+      <p class="text-justify">The Company imposes certain restrictions on your permissible use of the Site. You are prohibited from violating or attempting to violate any security features of the Site, including, without limitation, (a) accessing content or data not intended for you, or logging onto a server or account that you are not authorized to access; (b) attempting to probe, scan, or test the vulnerability of the Site, or any<br>
+      associated system or network, or to breach security or authentication measures without proper authorization; (c) interfering or attempting to interfere with service to any user, host, or network, including, without limitation, by means of submitting a virus to the Site or Service, overloading, “flooding,” “spamming,” “mail bombing,” or “crashing;” (d) using the Site to send unsolicited e-mail, including, without limitation, promotions, or advertisements for products or services; (e) forging any TCP/IP packet header or any part of the header information in any e-mail or in any posting using the Service; or (f) attempting to modify, reverse-engineer, decompile, disassemble, or otherwise reduce or attempt to reduce to a human-perceivable form any of the source code used by the Company in providing the Site. Any violation of system or network security may subject you to civil and/or criminal liability.</p>
+      <h2>7. Copyright</h2>
+      <p class="text-justify">All contents of Site are: Copyright © 2017 Virtualitics, Inc. All rights reserved.</p>
+      <h2>8. Governing Law</h2>
+      <p class="text-justify">The terms of this Agreement shall be construed in accordance with and governed by the laws of the United States and the State of California, without reference to their rules regarding conflicts of law. You hereby irrevocably consent to the exclusive jurisdiction of the state or federal courts in Los Angeles County, California, USA in all disputes arising out of or related to the use of the Site.</p>
+      <h2>9. Severability; Waiver</h2>
+      <p class="text-justify">If, for whatever reason, a court of competent jurisdiction finds any term or condition in this Agreement to be unenforceable, all other terms and conditions will remain unaffected and in full force and effect. No waiver of any breach of any provision of this Agreement shall constitute a waiver of any prior, concurrent, or subsequent breach of the same or any other provisions hereof, and no waiver shall be effective unless made in writing and signed by an authorized representative of the waiving party.</p>
+      <h2>10. No License</h2>
+      <p class="text-justify">Nothing contained on the Site should be understood as granting you a license to use any of the trademarks, service marks, or logos owned by the Company or by any third party.</p>
+      <h2>11. California Use Only</h2>
+      <p class="text-justify">The Site is controlled and operated by the Company from its offices in the State of California. The Company makes no representation that any of the materials or the services to which you have been given access are available or appropriate for use in other locations. Your use of or access to the Site should not be construed as the Company’s purposefully availing itself of the benefits or privilege of doing business in any state or jurisdiction other than California.</p>
+      <h2>12. Modifications.</h2>
+      <p class="text-justify">The Company may, in its sole discretion and without prior notice, (a) revise this Agreement; (b) modify the Site; and (c) discontinue the Site at any time. The Company shall post any revision to this Agreement to the Site, and the revision shall be effective immediately on such posting. You agree to review the terms of this Agreement and other online policies posted on the Site periodically to be aware of any<br>
+      revisions. You agree that, by continuing to use or access the Site following notice of any revision, you shall abide by any such revision.</p>
+      <h2>13. Acknowledgement.</h2>
+      <p class="text-justify">BY ACCESSING THE SITE, YOU ACKNOWLEDGE THAT YOU HAVE READ THE TERMS OF THIS AGREEMENT AND AGREE TO BE BOUND BY THEM.</p>
+      </div>
+    
+    </div>
+    
+  </div>
+</div>
+  
+</div>
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<!-- 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<!-- <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
+<script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase.min.js?r=2"></script> -->
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js"></script>
+<script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+      $('#fullpage').fullpage({
+        anchors: ['aiVr', 'immersive', 'maps', 'collab', 'smartMaps', 'contact' ],
+        sectionsColor: ['', '', ''],
+        scrollOverflow: true,
+        scrollBar: true,
+        css3: true,
+        keyboardScrolling: true,
+      });
+    });
+
+
+// Fix YouTube Embed Player
+    $('#stopVideo').on('click', function() {
+        //$('#popup-youtube-player').stopVideo();
+    $('#videoInModal')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');    
+    });
+
+    // Fix YouTube Embed Player
+    $('.ai-vr .btn').on('click', function() {
+        //$('#popup-youtube-player').stopVideo();
+    $('#videoInModal')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');    
+    });
+
+
+// THREE JS BG TOP //
+var mouseX = 0,
+    mouseY = 0,
+    windowHalfX = window.innerWidth / 2,
+    windowHalfY = window.innerHeight / 2,
+    SEPARATION = 200,
+    AMOUNTX = 10,
+    AMOUNTY = 10,
+    camera,
+    scene,
+    renderer;
+
+init();
+animate();
+
+function init() {
+
+  var container,
+      separation = 300,
+      amountX = 30,
+      amountY = 30,
+      particle;
+
+  container = document.getElementById('canvas');
+  //document.body.appendChild( container );
+  //document.getElementById('canvasHeader');
+  //document.body.addClasses(container);
+
+  scene = new THREE.Scene();
+
+  renderer = new THREE.CanvasRenderer({ alpha: true }); // gradient; this can be swapped for WebGLRenderer
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  container.appendChild( renderer.domElement );
+
+  camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    1,
+    10000
+  );
+  camera.position.z = 100;
+
+  // particles
+  var PI2 = Math.PI * 2;
+  var material = new THREE.SpriteCanvasMaterial({
+    color: 0xdddddd,
+    opacity:1,
+    program: function ( context ) {
+      context.beginPath();
+      context.arc( 0, 0, 0.5, 0, PI2, true );
+      context.fill();
+    }
+  });
+
+  var geometry = new THREE.Geometry();
+
+  for ( var i = 0; i < 200; i ++ ) {
+    particle = new THREE.Sprite( material );
+    particle.position.x = Math.random() * 2 - 1;
+    particle.position.y = Math.random() * 2 - 1;
+    particle.position.z = Math.random() * 2 - 1;
+    particle.position.normalize();
+    particle.position.multiplyScalar( Math.random() * 10 + 600 );
+    particle.scale.x = particle.scale.y = 5;
+    scene.add( particle );
+    geometry.vertices.push( particle.position );
+  }
+
+  // lines
+  var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x2fffe4, opacity: 0.25 } ) );
+  scene.add( line );
+
+  // mousey
+  document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+  document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+  document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+
+  window.addEventListener( 'resize', onWindowResize, false );
+
+} // end init();
+
+function onWindowResize() {
+
+  windowHalfX = window.innerWidth / 2;
+  windowHalfY = window.innerHeight / 2;
+
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+function onDocumentMouseMove(event) {
+
+  mouseX = event.clientX - windowHalfX;
+  mouseY = event.clientY - windowHalfY;
+
+}
+
+function onDocumentTouchStart( event ) {
+
+  if ( event.touches.length > 5 ) {
+
+    event.preventDefault();
+
+    mouseX = event.touches[ 0 ].pageX - windowHalfX;
+    mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+  }
+}
+
+function onDocumentTouchMove( event ) {
+
+  if ( event.touches.length == 6 ) {
+
+    event.preventDefault();
+
+    mouseX = event.touches[ 0 ].pageX - windowHalfX;
+    mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+  }
+}
+
+function animate() {
+
+  requestAnimationFrame( animate );
+  render();
+
+}
+
+function render() {
+
+  camera.position.x += ( mouseX - camera.position.x ) * .002;
+  camera.position.y += ( - mouseY + 50 - camera.position.y ) * .002;
+  camera.lookAt( scene.position );
+
+  renderer.render( scene, camera );
+
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
