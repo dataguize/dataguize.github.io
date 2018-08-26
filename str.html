@@ -1,0 +1,1483 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/2d1c7583b1.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+ <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
+   <!-- Bootstrap and Font Awesome css -->
+     
+
+<title>Dataguize New Client Intake Questionnaire</title>
+
+<style>
+/**/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  background: #e0e0e0;
+  color: #616161;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a.action {
+  font-size: 14px;
+  color: #03a9f4;
+}
+a.action:hover {
+  color: #0288d1;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  align-self: center;
+  transition: background 200ms;
+}
+button.primary {
+  background: #4caf50;
+}
+button.primary:hover {
+  background: #3d8b40;
+}
+button.primary:focus {
+  box-shadow: 0 0 0 2px #6ec071;
+}
+button.secondary {
+  background: #3d8b40;
+}
+button.secondary:hover {
+  background: #2d682f;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+h3 {
+  margin: 0;
+}
+
+.small {
+  font-size: 12px;
+  color: rgba(97, 97, 97, 0.8);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-top: 5px solid lightgray;
+  margin-top: 30px;
+}
+.panel .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.panel .header a {
+  font-weight: initial;
+}
+.panel .block {
+  padding: 10px 20px;
+}
+.panel .item {
+  display: flex;
+  flex-grow: 1;
+  margin: 10px 10px 0 10px;
+  padding-bottom: 10px;
+}
+.panel .item:not(:last-child) {
+  border-bottom: 1px solid lightgray;
+}
+
+.nav {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 40px;
+  background: #4caf50;
+  padding-left: 10px;
+}
+.nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 13px 12px 10px;
+  padding: 0 3px;
+  border-bottom: 3px solid transparent;
+  font-size: 14px;
+  transition: background 200ms, border-color 200ms;
+}
+.nav .nav-link:hover {
+  border-color: #3d8b40;
+}
+.nav .nav-collapse-label,
+.nav .nav-collapse-toggle {
+  display: none;
+}
+.nav .nav-collapse-label {
+  position: absolute;
+  right: 10px;
+  padding: 1px 5px;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.nav .nav-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+.nav .nav-right .nav-link {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px 15px;
+  border: none;
+}
+.nav .nav-right .nav-link .fa {
+  font-size: 20px;
+}
+.nav .nav-right .nav-link .badge {
+  display: flex;
+  position: absolute;
+  left: 23px;
+  top: 5px;
+  justify-content: center;
+  align-items: center;
+  background: #3d8b40;
+  font-size: 18px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  transition: background 200ms;
+}
+.nav .nav-right .nav-link:hover {
+  background: #3d8b40;
+  border: none;
+}
+.nav .nav-right .nav-link:hover .badge {
+  background: #2d682f;
+}
+
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: #4caf50;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 30px;
+  padding: 20px 30px;
+}
+.alert .block {
+  align-self: flex-start;
+  font-size: 18px;
+  width: 100%;
+}
+.alert .block p {
+  font-size: 14px;
+}
+.alert .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  width: 28px;
+  background: transparent;
+  color: #3d8b40;
+  padding: 0;
+  cursor: pointer;
+  transition: color 200ms;
+}
+.alert .close:hover {
+  color: #2d682f;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+}
+.col:not(:last-child) {
+  margin-right: 30px;
+}
+
+.progress {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  background: lightgray;
+  border-radius: 5px;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background: #1e88e5;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav,
+.cover {
+  min-width: 360px;
+}
+
+.cover {
+  height: 200px;
+  background: #ccc;
+}
+
+.content {
+  display: flex;
+  min-width: 300px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  background-image: url(https://dl2.pushbulletusercontent.com/zZFPhmDjvmuQbgr0vCQRD5EItgBx1eo0/topography.png);
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: 300px;
+  margin-top: -170px;
+}
+
+#right {
+  margin-top: 30px;
+}
+
+#user {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+#user #userImage {
+  background: #4caf50;
+  height: 200px;
+}
+#user .detail {
+  display: flex;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+#user .detail .icon {
+  width: 20px;
+  margin-right: 15px;
+  font-size: 20px;
+}
+#user #renew {
+  width: 100%;
+  margin: 15px 0 5px;
+}
+
+#connections {
+  margin-bottom: auto;
+}
+#connections .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 30px;
+}
+#connections .list .list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background: #4caf50;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: background 200ms;
+}
+#connections .list .list-item:hover {
+  background: #3d8b40;
+}
+
+.btn-view {
+  flex-shrink: 0;
+  margin: 10px 10px 10px 20px;
+  padding: 6px 15px;
+  font-size: 12px;
+}
+
+#goals .item {
+  flex-direction: column;
+}
+#goals .item .row:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+#signup {
+  flex-shrink: 0;
+  display: block;
+  margin: 10px 0 0 10px;
+  padding: 10px 30px;
+}
+
+#activity .item em {
+  font-style: normal;
+  color: #4caf50;
+}
+#activity .item .icon {
+  position: relative;
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-right: 10px;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+#activity .item .icon.warning:after {
+  content: "\f071";
+  color: #ff9800;
+  position: absolute;
+  font-size: 18px;
+  top: 3px;
+  left: 28px;
+}
+#activity .item .icon .fa-stack-1x {
+  color: #fff;
+}
+#activity .item > div {
+  display: flex;
+  align-items: center;
+}
+#activity .item .right {
+  flex-shrink: 0;
+}
+#activity .item .right div {
+  width: 100px;
+  text-align: center;
+}
+
+@media (max-width: 1260px) {
+  .content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  #topSection,
+  .alert,
+  #activity .item .right {
+    flex-direction: column;
+  }
+
+  #topSection .col {
+    margin-right: 0;
+  }
+
+  #signup {
+    align-self: flex-end;
+  }
+
+  #activity .item {
+    margin: 10px 0 0 0;
+    padding: 0 5px 10px;
+  }
+  #activity .item .right {
+    justify-content: center;
+  }
+
+  .col {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 720px) {
+  .nav {
+    align-items: flex-start;
+    padding-left: 0;
+  }
+  .nav .nav-collapse-label {
+    display: block;
+  }
+  .nav .nav-collapse-toggle:checked ~ .nav-collapse {
+    display: flex;
+  }
+  .nav .nav-collapse {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    background: #4caf50;
+    width: 100%;
+  }
+  .nav .nav-collapse .nav-link {
+    margin: 0;
+    padding: 10px 15px;
+    border: none;
+  }
+  .nav .nav-collapse .nav-link:hover {
+    border: none;
+    margin: 0;
+    background: #3d8b40;
+  }
+  .nav .nav-right {
+    right: 50px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content > .col {
+    margin-right: 0;
+  }
+}
+
+
+
+
+</style>
+</head>
+
+  <body onload='wwsInit();'>
+
+<div class="nav">
+  <label class="nav-collapse-label" for="nav-toggle"><i class="fa fa-bars"></i></label>
+  <input class="nav-collapse-toggle" id="nav-toggle" type="checkbox"/>
+  <div class="nav-collapse"><a class="nav-link" href="#">Memberships</a><a class="nav-link" href="#">Payments</a><a class="nav-link" href="#">Events</a><a class="nav-link" href="#">Connections</a><a class="nav-link" href="#">Account</a></div>
+  <div class="nav-right"><a class="nav-link" href="#"><i class="fa fa-bell"></i>
+      <div class="badge">4</div></a><a class="nav-link" href="#"><i class="fa fa-cog"></i></a><a class="nav-link" href="#"><i class="fa fa-power-off"></i></a></div>
+</div>
+<div class="cover"></div>
+<div class="content">
+  <div class="col" id="left">
+    <div class="panel" id="user">
+      <div class="header">{{user id}}<a class="action" href="#">Edit Profile</a></div>
+      <div id="userImage"></div>
+      <div class="block">
+        <h2>Welcome, {{User}}</h2><strong class="detail">{{Primary Organization Name}}</strong>
+        <div class="detail">
+          <div class="icon"><i class="fa fa-map-marker"></i></div>
+          <div><strong>323 Lakeshore Drive</strong> <br/> Chicago, IL</div>
+        </div>
+        <div class="detail">
+          <div class="icon"><i class="fa fa-phone"></i></div>
+          <div>+1 (555) 555-5555</div>
+        </div>
+        <div class="detail">
+          <div class="icon"><i class="fa fa-envelope"></i></div>
+          <div>mail@email.com</div>
+        </div>
+        <div>Joined: {{05/10/2010}}</div>
+        <div>Expires: {{07/12/2015}}</div>
+        <button class="primary" id="renew">Start Evaluation Now</button>
+      </div>
+    </div>
+    <div class="panel" id="connections">
+      <div class="header">Need<a class="action" href="/faq.html">Help</a></div>
+      
+
+
+
+
+
+
+
+    </div>
+  </div>
+  <div class="col" id="right">
+    <h3>{{Association Name}}</h3>
+    <div class="row" id="topSection">
+      <div class="col panel" id="upcomingEvents">
+        <div class="header">Upcoming Events<a class="action" href="#">All Upcoming</a></div>
+        <div class="item row">
+          <div>Greater Chicago Patent Specialist 2018
+            <div class="small">March 15th, 2015</div>
+          </div>
+          <button class="primary btn-view" href="#">View</button>
+        </div>
+        <div class="item row">
+          <div>Wednesday Potluck Dinner, Chicago Chapter
+            <div class="small">july 15th, 2018</div>
+          </div>
+          <button class="primary btn-view" href="#">View</button>
+        </div>
+      </div>
+      <div class="col panel" id="goals">
+        <div class="header">Producct<a class="action" href="#">Submit New Product</a></div>
+        <div class="item">
+          <div class="row">July 2018 
+            <div>1000users</div>
+          </div>
+          <div class="row">
+            <div class="progress"><span style="width:73%;"></span></div>
+          </div>
+          <div class="row">65% of information collected! 35% of your goal<a class="action" href="#">Details</a></div>
+        </div>
+        <div class="item">
+          <div class="row">Event Fundraising
+            <div>Contact us Here</div>
+          </div>
+          <div class="row">
+            <div class="progress"><span style="width:14%;"></span></div>
+          </div>
+          <div class="row"> <a class="action" href="#"><!-- Details --></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="alert">
+      <div class="block"><strong>2018 Stearring LLC. </strong>
+        <p><!-- Interesting speakers, delicious food, do not miss this event! --></p>
+      </div>
+      <button class="secondary" id="signup" href="#">Sign up Today!</button>
+      <button class="close"><i class="fa fa-times-circle"></i></button>
+    </div>
+    <div class="panel" id="activity">
+      <div class="header">Recent Activity<a class="action" href="#">All Activity</a></div>
+      <div class="item row">
+        <div class="left">
+          <div class="icon warning"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-usd fa-stack-1x"></i></span></div>
+          <div>You have a recent project that did not process</div>
+        </div>
+        <div class="right">
+          <button class="primary btn-view" href="#">View</button>
+          <div>Continue</div>
+        </div>
+      </div>
+      <div class="item row">
+        <div class="left">
+          <div class="icon"><i class="fa fa-calendar-o fa-2x"></i></div>
+          <div>You registered for an event, Greater Chicagoland Event 2018</div>
+        </div>
+        <div class="right">
+          <button class="primary btn-view" href="#">View</button>
+          <div>Check status</div>
+        </div>
+      </div>
+      <div class="item row">
+        <div class="left">
+          <div class="icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-usd fa-stack-1x"></i></span></div>
+          <div>You made a payment in the amount of <em>$34.99</em> to your membership account</div>
+        </div>
+        <div class="right">
+          <button class="primary btn-view" href="#">View</button>
+          <div>This month</div>
+        </div>
+      </div>
+      <div class="item row">
+        <div class="left">
+          <div class="icon"><i class="fa fa-envelope fa-2x"></i></div>
+          <div>Email us at Stearring LLC email and we usually reply within at most 2 business days<!-- You received a message from Bill Jones --></div>
+        </div>
+        <div class="right">
+          <button class="primary btn-view" href="#">View</button>
+          <div><a href="mailto:stearringllc@gmail.com">Email Us</a><!-- 7 Days Ago --></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Static Navigation -->
+<script type='text/javascript'>
+   var wwsRelease = 'http://webworksheet.com/release/030601';
+   var iterations = 3;
+   var manualCalculation = true;
+   var calculateOnInit = true;
+   var imageFolder = 'wwsImages';
+   var displayZeroes = true;
+   var dbConnection = '';
+   var dbQueryScript = '';
+   var firstInput = 'iD12';
+   var datePickerAuto = '';
+   var datePickerImg = '';
+   var activeBorder = '2px solid black';
+   var activeBackground = 'transparent';
+   var tabOrder = '';
+   var lastBtnClick = '';
+   var pageOrientation = 1;
+   var pageLeftMargin = 72;
+   var pageRightMargin = 72;
+   var pageTopMargin = 96;
+   var pageBottomMargin = 96;
+   var protectPage = false;
+   var webQueries = new Array();
+</script>
+<script type='text/javascript' src='http://webworksheet.com/release/030601/webworksheet.js'></script>
+<script type='text/javascript' src='http://webworksheet.com/release/030601/webworksheetUpdate.js'></script>
+
+
+
+
+
+<center style='display: flex;'>
+<form name='worksheet' action='' enctype='multipart/form-data'>
+<table id='main' border=0 cellpadding=0px cellspacing=0 style='display: flex;align-items: center;align-content: center;margin: auto;text-align: center;width: 100%;'>
+<col width='3vw' valign='middle' align='left'>
+<col width='3vw' valign='middle' align='left'>
+<col width='3vw' valign='middle' align='left'>
+<col width='3vw' valign='middle' align='left'>
+<col width='0px' valign='middle' align='left'>
+<col width='0px' valign='middle' align='left'>
+<col width='4vw' valign='middle' align='left'>
+
+<tr id='ROW1' style='height:3vh;'>
+<td id='A1' class='A1' category='general'></td>
+<td id='B1' class='A1' category='general'></td>
+<td id='C1' class='A1' category='general'></td>
+<td id='D1' class='A1' category='general'></td>
+<td id='E1' class='hidden' category='general'></td>
+<td id='F1' class='hidden' category='general'></td>
+<td id='G1' class='A1' category='general'></td></tr>
+
+<tr id='ROW2' style='height:5vh;'>
+<td id='A2' class='A2' category='general'></td>
+<td id='B2' colspan=6 class='B2' category='general'><span style='margin: auto;text-align: center;font-size:3vh; color:#808080;'>STEARRING LLC <br></span><span style='font-size: 2vh; color:#808080;margin: auto;text-align: center;'>Idea Evaluation Tool</span></td></tr>
+
+
+<div id='B7' class='B7' category='general'>Rating Instructions:</div>
+<td id='C7' class='C7' category='general'></td>
+<td id='D7' class='A1' category='general'></td>
+<td id='E7' class='hidden' category='general'></td>
+<td id='F7' class='hidden' category='general'></td>
+<td id='G7' class='A1' category='general'></td></tr>
+
+<tr id='ROW8' style='height:2vh;width: 20vw;'>
+<td id='A8' class='A7' category='general'></td>
+<td id='B8' class='B8' category='general'>Rate each question on the scale from 1 to 5, 1 being lowest or least likely, and 5 being the highest or most likely.</td>
+<td id='C8' class='C8' category='general'></td>
+<td id='D8' class='A1' category='general'></td>
+<td id='E8' class='hidden' category='general'></td>
+<td id='F8' class='hidden' category='general'></td>
+<td id='G8' class='A1' category='general'></td></tr>
+
+<tr id='ROW9' style='height:3vh;width: 20vw;'>
+<td id='A9' class='A7' category='general'></td>
+<td id='B9' class='B9' category='general'>The Least/Highest columns helps defines the rating for each criteria.  The least columns shows the least or lowest stage of each criteria while the Highest column shows the highest stage of each criteria.  The rating should fall between these two ranges.</td>
+<td id='C9' class='C8' category='general'></td>
+<td id='D9' class='A1' category='general'></td>
+<td id='E9' class='hidden' category='general'></td>
+<td id='F9' class='hidden' category='general'></td>
+<td id='G9' class='A1' category='general'></td></tr>
+
+<tr id='ROW10' style='height:22px;'>
+<td id='A10' class='A1' category='general'></td>
+<td id='B10' class='B10' category='general'></td>
+<td id='C10' class='B6' category='general'></td>
+<td id='D10' class='D10' category='general'></td>
+<td id='E10' class='hidden' category='general'></td>
+<td id='F10' class='hidden' category='general'></td>
+<td id='G10' class='D10' category='general'></td></tr>
+
+<tr id='ROW11' style='height:51px;'>
+<td id='A11' class='A7' category='general'></td>
+<td id='B11' class='B11' category='general'>BUSINESS RISK FACTORS</td>
+<td id='C11' class='C11' category='general'>Least</td>
+<td id='D11' class='C11' category='general'>Rating<br> 1 - 5</td>
+<td id='E11' class='hidden' category='general'></td>
+<td id='F11' class='hidden' category='general'></td>
+<td id='G11' class='C11' category='general'>Highest</td></tr>
+
+<tr id='ROW12' style='height:43px;'>
+<td id='A12' class='A7' category='general'></td>
+<td id='B12' class='B12' category='general'>In terms of intended functions, will it actually do what it is intended to do.</td>
+<td id='C12' class='C12' category='general'>Concept</td>
+<td id='D12' class='D12' category='general' data-cval=''>
+   <textarea id='iD12' class='iD12' onChange='return calculate("D12")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E12' class='hidden' category='general'></td>
+<td id='F12' class='hidden' category='general'></td>
+<td id='G12' class='G12' category='general'>Working Model</td></tr>
+
+<tr id='ROW13' style='height:43px;'>
+<td id='A13' class='A7' category='general'></td>
+<td id='B13' class='B13' category='general'>Invention may need new technological processes or equipment needed for production.</td>
+<td id='C13' class='C13' category='general'>None Existing</td>
+<td id='D13' class='D12' category='general' data-cval=''>
+   <textarea id='iD13' class='iD12' onChange='return calculate("D13")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E13' class='hidden' category='general'></td>
+<td id='F13' class='hidden' category='general'></td>
+<td id='G13' class='G13' category='general'>Existing</td></tr>
+
+<tr id='ROW14' style='height:43px;'>
+<td id='A14' class='A7' category='general'></td>
+<td id='B14' class='B13' category='general'>Based on available information, stage of development.</td>
+<td id='C14' class='C13' category='general'>Sketches</td>
+<td id='D14' class='D12' category='general' data-cval=''>
+   <textarea id='iD14' class='iD12' onChange='return calculate("D14")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E14' class='hidden' category='general'></td>
+<td id='F14' class='hidden' category='general'></td>
+<td id='G14' class='G13' category='general'>Prototype</td></tr>
+
+<tr id='ROW15' style='height:43px;'>
+<td id='A15' class='A7' category='general'></td>
+<td id='B15' class='B13' category='general'>The amount of capital and other costs necessary for development to the market-ready stage.</td>
+<td id='C15' class='C13' category='general'>High</td>
+<td id='D15' class='D12' category='general' data-cval=''>
+   <textarea id='iD15' class='iD12' onChange='return calculate("D15")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E15' class='hidden' category='general'></td>
+<td id='F15' class='hidden' category='general'></td>
+<td id='G15' class='G13' category='general'>Low</td></tr>
+
+<tr id='ROW16' style='height:43px;'>
+<td id='A16' class='A7' category='general'></td>
+<td id='B16' class='B13' category='general'>The expected payback time (time required to recover initial investment)</td>
+<td id='C16' class='C13' category='general'>&#62;10 yrs</td>
+<td id='D16' class='D12' category='general' data-cval=''>
+   <textarea id='iD16' class='iD12' onChange='return calculate("D16")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E16' class='hidden' category='general'></td>
+<td id='F16' class='hidden' category='general'></td>
+<td id='G16' class='G13' category='general'>&#60;2 yrs</td></tr>
+
+<tr id='ROW17' style='height:43px;'>
+<td id='A17' class='A7' category='general'></td>
+<td id='B17' class='B13' category='general'>Profitability is defined as the extent to which anticipated revenues will cover the relevant costs (direct, indirect, and capital). Anticipated revenues.</td>
+<td id='C17' class='C13' category='general'>Doesn&#39;t Cover Costs</td>
+<td id='D17' class='D12' category='general' data-cval=''>
+   <textarea id='iD17' class='iD12' onChange='return calculate("D17")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E17' class='hidden' category='general'></td>
+<td id='F17' class='hidden' category='general'></td>
+<td id='G17' class='G13' category='general'>Exceed Costs</td></tr>
+
+<tr id='ROW18' style='height:43px;'>
+<td id='A18' class='A7' category='general'></td>
+<td id='B18' class='B13' category='general'>The marketing research required to develop a market-ready product is estimated to be&#8230;</td>
+<td id='C18' class='C13' category='general'>Difficult</td>
+<td id='D18' class='D12' category='general' data-cval=''>
+   <textarea id='iD18' class='iD12' onChange='return calculate("D18")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E18' class='hidden' category='general'></td>
+<td id='F18' class='hidden' category='general'></td>
+<td id='G18' class='G13' category='general'>Easy</td></tr>
+
+<tr id='ROW19' style='height:43px;'>
+<td id='A19' class='A7' category='general'></td>
+<td id='B19' class='B19' category='general'>The technology for research and development needed to reach the production stage.</td>
+<td id='C19' class='C19' category='general'>None Existing</td>
+<td id='D19' class='D19' category='general' data-cval=''>
+   <textarea id='iD19' class='iD12' onChange='return calculate("D19")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E19' class='hidden' category='general'></td>
+<td id='F19' class='hidden' category='general'></td>
+<td id='G19' class='G19' category='general'>Existing</td></tr>
+
+<tr id='ROW20' style='height:26px;'>
+<td id='A20' class='A7' category='general'></td>
+<td id='B20' class='B20' category='general'>Ideal Total Score Goal (4.5), Min. (2.93)</td>
+<td id='C20' class='C20' category='general'></td>
+<td id='D20' class='D20' category='number' format='0.00'></td>
+<td id='E20' class='hidden' category='general'></td>
+<td id='F20' class='hidden' category='general'></td>
+<td id='G20' class='G20' category='general'><input class='button' type='button' value='Calculate' onClick='return recalculate("D12:F19","");' onfocus='return hilite(this.id);' /></td></tr>
+
+<tr id='ROW21' style='height:22px;'>
+<td id='A21' class='A7' category='general'></td>
+<td id='B21' colspan=6 class='B21' category='general'>What does this score means:</td></tr>
+
+<tr id='ROW22' style='height:111px;'>
+<td id='A22' class='A7' category='general'></td>
+<td id='B22' colspan=6 class='B22' category='general'>The business risk factor category reflects how well your idea is developed or thought through.  This category measures the overall health of the idea relative to specific factors such as investment, costs, working model and basic market analysis.  Scoring low in this category does not mean that the idea would not be a success.  However, it shows that you need to do more research and development work.  On the other hand a low score indicate that the idea or innovation needs more detail and it cannot be evaluated properly. </td></tr>
+
+<tr id='ROW23' style='height:24px;'>
+<td id='A23' class='A1' category='general'></td>
+<td id='B23' class='B23' category='general'></td>
+<td id='C23' class='B23' category='general'></td>
+<td id='D23' class='B23' category='general'></td>
+<td id='E23' class='hidden' category='general'></td>
+<td id='F23' class='hidden' category='general'></td>
+<td id='G23' class='B23' category='general'></td></tr>
+
+<tr id='ROW24' style='height:51px;'>
+<td id='A24' class='A7' category='general'></td>
+<td id='B24' class='B11' category='general'>MARKET ACCEPTANCE FACTORS</td>
+<td id='C24' class='C11' category='general'>Least</td>
+<td id='D24' class='C11' category='general'>Rating<br> 1 - 5</td>
+<td id='E24' class='hidden' category='general'></td>
+<td id='F24' class='hidden' category='general'></td>
+<td id='G24' class='C11' category='general'>Highest</td></tr>
+
+<tr id='ROW25' style='height:43px;'>
+<td id='A25' class='A7' category='general'></td>
+<td id='B25' class='B12' category='general'>The total market for products of this type might be&#8230;.</td>
+<td id='C25' class='C25' category='general'>Specialezed</td>
+<td id='D25' class='D12' category='general' data-cval=''>
+   <textarea id='iD25' class='iD12' onChange='return calculate("D25")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E25' class='hidden' category='general'></td>
+<td id='F25' class='hidden' category='general'></td>
+<td id='G25' class='G12' category='general'>Mass Market</td></tr>
+
+<tr id='ROW26' style='height:43px;'>
+<td id='A26' class='A7' category='general'></td>
+<td id='B26' class='B13' category='general'>Expected sales of this product might be&#8230;.</td>
+<td id='C26' class='C25' category='general'>Low</td>
+<td id='D26' class='D12' category='general' data-cval=''>
+   <textarea id='iD26' class='iD12' onChange='return calculate("D26")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E26' class='hidden' category='general'></td>
+<td id='F26' class='hidden' category='general'></td>
+<td id='G26' class='G13' category='general'>Large</td></tr>
+
+<tr id='ROW27' style='height:43px;'>
+<td id='A27' class='A7' category='general'></td>
+<td id='B27' class='B13' category='general'>The market demand for products of this type appears to be&#8230;..</td>
+<td id='C27' class='C25' category='general'>Declining</td>
+<td id='D27' class='D12' category='general' data-cval=''>
+   <textarea id='iD27' class='iD12' onChange='return calculate("D27")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E27' class='hidden' category='general'></td>
+<td id='F27' class='hidden' category='general'></td>
+<td id='G27' class='G13' category='general'>Growing</td></tr>
+
+<tr id='ROW28' style='height:43px;'>
+<td id='A28' class='A7' category='general'></td>
+<td id='B28' class='B13' category='general'>The fluctuation in demand is likely to be&#8230;.</td>
+<td id='C28' class='C25' category='general'>Unstable</td>
+<td id='D28' class='D12' category='general' data-cval=''>
+   <textarea id='iD28' class='iD12' onChange='return calculate("D28")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E28' class='hidden' category='general'></td>
+<td id='F28' class='hidden' category='general'></td>
+<td id='G28' class='G13' category='general'>Stable</td></tr>
+
+<tr id='ROW29' style='height:43px;'>
+<td id='A29' class='A7' category='general'></td>
+<td id='B29' class='B13' category='general'>The product life cycle is likely to be&#8230;..</td>
+<td id='C29' class='C25' category='general'>&#60;2 yrs</td>
+<td id='D29' class='D12' category='general' data-cval=''>
+   <textarea id='iD29' class='iD12' onChange='return calculate("D29")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E29' class='hidden' category='general'></td>
+<td id='F29' class='hidden' category='general'></td>
+<td id='G29' class='G13' category='general'>&#62;10 yrs</td></tr>
+
+<tr id='ROW30' style='height:43px;'>
+<td id='A30' class='A7' category='general'></td>
+<td id='B30' class='B19' category='general'>The potential for additional products, multiple styles, qualities, price ranges, etc.,</td>
+<td id='C30' class='C25' category='general'>Limited</td>
+<td id='D30' class='D19' category='general' data-cval=''>
+   <textarea id='iD30' class='iD12' onChange='return calculate("D30")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E30' class='hidden' category='general'></td>
+<td id='F30' class='hidden' category='general'></td>
+<td id='G30' class='G19' category='general'>Unlimited</td></tr>
+
+<tr id='ROW31' style='height:26px;'>
+<td id='A31' class='A7' category='general'></td>
+<td id='B31' class='B20' category='general'>Ideal Total Score Goal (4.5), Min. (2.93)</td>
+<td id='C31' class='C20' category='general'></td>
+<td id='D31' class='D20' category='number' format='0.00'></td>
+<td id='E31' class='hidden' category='general'></td>
+<td id='F31' class='hidden' category='general'></td>
+<td id='G31' class='G20' category='general'><input class='button' type='button' value='Calculate' onClick='return recalculate("D25:F30","");' onfocus='return hilite(this.id);' /></td></tr>
+
+<tr id='ROW32' style='height:22px;'>
+<td id='A32' class='A7' category='general'></td>
+<td id='B32' colspan=6 class='B21' category='general'>What does this score means:</td></tr>
+
+<tr id='ROW33' style='height:144px;'>
+<td id='A33' class='A7' category='general'></td>
+<td id='B33' colspan=6 class='B22' category='general'>The market acceptance category evaluates the idea or innovation place in its target market.  The criteria evaluate the product ease of use, utility, and market value chain.  This category is important to refine the product market placement and the supply chain once the product is ready for production.  Scoring low in this category could be miss leading since most of these factors gets better defined in latter phase of the idea or innovation evaluation process.  However, understanding these factors and the ability to address them helps in better defining the idea or innovation overall market potential.  This score coupled with the business risk factors should provide a better understanding of the idea or innovation investment risks.</td></tr>
+
+<tr id='ROW34' style='height:24px;'>
+<td id='A34' class='A1' category='general'></td>
+<td id='B34' class='B23' category='general'></td>
+<td id='C34' class='B23' category='general'></td>
+<td id='D34' class='B23' category='general'></td>
+<td id='E34' class='hidden' category='general'></td>
+<td id='F34' class='hidden' category='general'></td>
+<td id='G34' class='B23' category='general'></td></tr>
+
+<tr id='ROW35' style='height:51px;'>
+<td id='A35' class='A7' category='general'></td>
+<td id='B35' class='B11' category='general'>DEMAND ANALYSIS FACTORS</td>
+<td id='C35' class='C11' category='general'>Least</td>
+<td id='D35' class='C11' category='general'>Rating<br> 1 - 5</td>
+<td id='E35' class='hidden' category='general'></td>
+<td id='F35' class='hidden' category='general'></td>
+<td id='G35' class='C11' category='general'>Highest</td></tr>
+
+<tr id='ROW36' style='height:43px;'>
+<td id='A36' class='A7' category='general'></td>
+<td id='B36' class='B12' category='general'>Compatibility with existing attitudes and methods of use is&#8230;.</td>
+<td id='C36' class='C25' category='general'>Low</td>
+<td id='D36' class='D12' category='general' data-cval=''>
+   <textarea id='iD36' class='iD12' onChange='return calculate("D36")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E36' class='hidden' category='general'></td>
+<td id='F36' class='hidden' category='general'></td>
+<td id='G36' class='G12' category='general'>High</td></tr>
+
+<tr id='ROW37' style='height:43px;'>
+<td id='A37' class='A7' category='general'></td>
+<td id='B37' class='B13' category='general'>The level of need fulfilled or utility provided by this innovation is&#8230;.</td>
+<td id='C37' class='C25' category='general'>Low</td>
+<td id='D37' class='D12' category='general' data-cval=''>
+   <textarea id='iD37' class='iD12' onChange='return calculate("D37")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E37' class='hidden' category='general'></td>
+<td id='F37' class='hidden' category='general'></td>
+<td id='G37' class='G13' category='general'>High</td></tr>
+
+<tr id='ROW38' style='height:43px;'>
+<td id='A38' class='A7' category='general'></td>
+<td id='B38' class='B13' category='general'>The amount of learning needed for correct use is&#8230;.</td>
+<td id='C38' class='C25' category='general'>High</td>
+<td id='D38' class='D12' category='general' data-cval=''>
+   <textarea id='iD38' class='iD12' onChange='return calculate("D38")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E38' class='hidden' category='general'></td>
+<td id='F38' class='hidden' category='general'></td>
+<td id='G38' class='G13' category='general'>Low</td></tr>
+
+<tr id='ROW39' style='height:43px;'>
+<td id='A39' class='A7' category='general'></td>
+<td id='B39' class='B13' category='general'>The degree to which the sale or use of this product is dependent upon other products, processes or systems is&#8230;.</td>
+<td id='C39' class='C25' category='general'>High</td>
+<td id='D39' class='D12' category='general' data-cval=''>
+   <textarea id='iD39' class='iD12' onChange='return calculate("D39")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E39' class='hidden' category='general'></td>
+<td id='F39' class='hidden' category='general'></td>
+<td id='G39' class='G13' category='general'>Low</td></tr>
+
+<tr id='ROW40' style='height:43px;'>
+<td id='A40' class='A7' category='general'></td>
+<td id='B40' class='B13' category='general'>The advantage and benefits of the products are&#8230;.</td>
+<td id='C40' class='C25' category='general'>Unknown</td>
+<td id='D40' class='D12' category='general' data-cval=''>
+   <textarea id='iD40' class='iD12' onChange='return calculate("D40")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E40' class='hidden' category='general'></td>
+<td id='F40' class='hidden' category='general'></td>
+<td id='G40' class='G13' category='general'>Known</td></tr>
+
+<tr id='ROW41' style='height:43px;'>
+<td id='A41' class='A7' category='general'></td>
+<td id='B41' class='B13' category='general'>The costs and effort required to promote the advantages, features, and benefits are likely to be&#8230;.</td>
+<td id='C41' class='C25' category='general'>High</td>
+<td id='D41' class='D12' category='general' data-cval=''>
+   <textarea id='iD41' class='iD12' onChange='return calculate("D41")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E41' class='hidden' category='general'></td>
+<td id='F41' class='hidden' category='general'></td>
+<td id='G41' class='G19' category='general'>Low</td></tr>
+
+<tr id='ROW42' style='height:43px;'>
+<td id='A42' class='A7' category='general'></td>
+<td id='B42' class='B13' category='general'>The cost and difficulty of establishing distribution channels are likely to be&#8230;..</td>
+<td id='C42' class='C25' category='general'>High</td>
+<td id='D42' class='D12' category='general' data-cval=''>
+   <textarea id='iD42' class='iD12' onChange='return calculate("D42")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E42' class='hidden' category='general'></td>
+<td id='F42' class='hidden' category='general'></td>
+<td id='G42' class='G12' category='general'>Low</td></tr>
+
+<tr id='ROW43' style='height:43px;'>
+<td id='A43' class='A7' category='general'></td>
+<td id='B43' class='B19' category='general'>The cost and difficulty associated with providing product service is likely to be&#8230;..</td>
+<td id='C43' class='C25' category='general'>High</td>
+<td id='D43' class='D19' category='general' data-cval=''>
+   <textarea id='iD43' class='iD12' onChange='return calculate("D43")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E43' class='hidden' category='general'></td>
+<td id='F43' class='hidden' category='general'></td>
+<td id='G43' class='G19' category='general'>Low</td></tr>
+
+<tr id='ROW44' style='height:26px;'>
+<td id='A44' class='A7' category='general'></td>
+<td id='B44' class='B20' category='general'>Ideal Total Score Goal (4.5), Min. (2.50)</td>
+<td id='C44' class='C20' category='general'></td>
+<td id='D44' class='D20' category='number' format='0.00'></td>
+<td id='E44' class='hidden' category='general'></td>
+<td id='F44' class='hidden' category='general'></td>
+<td id='G44' class='G20' category='general'><input class='button' type='button' value='Calculate' onClick='return recalculate("D36:F43","");' onfocus='return hilite(this.id);' /></td></tr>
+
+<tr id='ROW45' style='height:22px;'>
+<td id='A45' class='A7' category='general'></td>
+<td id='B45' colspan=6 class='B21' category='general'>What does this score means:</td></tr>
+
+<tr id='ROW46' style='height:111px;'>
+<td id='A46' class='A7' category='general'></td>
+<td id='B46' colspan=6 class='B22' category='general'>The demand analysis factor is, as the name indicates, analysis of the idea market demand.  These factors assess the demand for that particular idea or innovation based on market research.  These factors focus more on projected sales demands, market demand fluctuations, and breadth of products.  This category is a very important as it might deem the idea un-marketable.  A good analysis and product market understanding is needed to be able to address these factors adequately.  Scoring closer to the goal is a good sign of product market potential.</td></tr>
+
+<tr id='ROW47' style='height:22px;'>
+<td id='A47' class='A1' category='general'></td>
+<td id='B47' class='B47' category='general'></td>
+<td id='C47' class='B47' category='general'></td>
+<td id='D47' class='B10' category='general'></td>
+<td id='E47' class='hidden' category='general'></td>
+<td id='F47' class='hidden' category='general'></td>
+<td id='G47' class='F47' category='general'></td></tr>
+
+<tr id='ROW48' style='height:51px;'>
+<td id='A48' class='A7' category='general'></td>
+<td id='B48' class='B11' category='general'>COMPETITIVE FACTORS</td>
+<td id='C48' class='C11' category='general'>Least</td>
+<td id='D48' class='C11' category='general'>Rating<br> 1 - 5</td>
+<td id='E48' class='hidden' category='general'></td>
+<td id='F48' class='hidden' category='general'></td>
+<td id='G48' class='C11' category='general'>Highest</td></tr>
+
+<tr id='ROW49' style='height:43px;'>
+<td id='A49' class='A7' category='general'></td>
+<td id='B49' class='B12' category='general'>Relative to competition and/or substitutes, appearance is likely to be perceived as&#8230;.</td>
+<td id='C49' class='C25' category='general'>Inferior</td>
+<td id='D49' class='D12' category='general' data-cval=''>
+   <textarea id='iD49' class='iD12' onChange='return calculate("D49")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E49' class='hidden' category='general'></td>
+<td id='F49' class='hidden' category='general'></td>
+<td id='G49' class='G12' category='general'>Superior</td></tr>
+
+<tr id='ROW50' style='height:43px;'>
+<td id='A50' class='A7' category='general'></td>
+<td id='B50' class='B13' category='general'>Relative to competing and/or substitution products, services, or processes, the function performed might be perceived as&#8230;.</td>
+<td id='C50' class='C25' category='general'>Inferior</td>
+<td id='D50' class='D12' category='general' data-cval=''>
+   <textarea id='iD50' class='iD12' onChange='return calculate("D50")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E50' class='hidden' category='general'></td>
+<td id='F50' class='hidden' category='general'></td>
+<td id='G50' class='G13' category='general'>Superior</td></tr>
+
+<tr id='ROW51' style='height:43px;'>
+<td id='A51' class='A7' category='general'></td>
+<td id='B51' class='B13' category='general'>Relative to competition and/or substitutes, durability of this product is likely to be perceived as&#8230;..</td>
+<td id='C51' class='C25' category='general'>Inferior</td>
+<td id='D51' class='D12' category='general' data-cval=''>
+   <textarea id='iD51' class='iD12' onChange='return calculate("D51")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E51' class='hidden' category='general'></td>
+<td id='F51' class='hidden' category='general'></td>
+<td id='G51' class='G13' category='general'>Superior</td></tr>
+
+<tr id='ROW52' style='height:43px;'>
+<td id='A52' class='A7' category='general'></td>
+<td id='B52' class='B13' category='general'>Relative to competition and/or substitute products, the selling price is likely to be&#8230;..</td>
+<td id='C52' class='C25' category='general'>High</td>
+<td id='D52' class='D12' category='general' data-cval=''>
+   <textarea id='iD52' class='iD12' onChange='return calculate("D52")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E52' class='hidden' category='general'></td>
+<td id='F52' class='hidden' category='general'></td>
+<td id='G52' class='G13' category='general'>Low</td></tr>
+
+<tr id='ROW53' style='height:43px;'>
+<td id='A53' class='A7' category='general'></td>
+<td id='B53' class='B13' category='general'>Existing competition for this innovation seems to be&#8230;..</td>
+<td id='C53' class='C25' category='general'>High</td>
+<td id='D53' class='D12' category='general' data-cval=''>
+   <textarea id='iD53' class='iD12' onChange='return calculate("D53")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E53' class='hidden' category='general'></td>
+<td id='F53' class='hidden' category='general'></td>
+<td id='G53' class='G13' category='general'>Low</td></tr>
+
+<tr id='ROW54' style='height:43px;'>
+<td id='A54' class='A7' category='general'></td>
+<td id='B54' class='B13' category='general'>Competition from new entrants or competitive reaction is likely to be&#8230;.</td>
+<td id='C54' class='C25' category='general'>High</td>
+<td id='D54' class='D12' category='general' data-cval=''>
+   <textarea id='iD54' class='iD12' onChange='return calculate("D54")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E54' class='hidden' category='general'></td>
+<td id='F54' class='hidden' category='general'></td>
+<td id='G54' class='G19' category='general'>Low</td></tr>
+
+<tr id='ROW55' style='height:43px;'>
+<td id='A55' class='A7' category='general'></td>
+<td id='B55' class='B19' category='general'>The degree to which this innovation can be protected is&#8230;..</td>
+<td id='C55' class='C25' category='general'>Low</td>
+<td id='D55' class='D19' category='general' data-cval=''>
+   <textarea id='iD55' class='iD12' onChange='return calculate("D55")' onfocus='return hilite(this.id);' data-default=''></textarea></td>
+<td id='E55' class='hidden' category='general'></td>
+<td id='F55' class='hidden' category='general'></td>
+<td id='G55' class='G55' category='general'>High</td></tr>
+
+<tr id='ROW56' style='height:24px;'>
+<td id='A56' class='A7' category='general'></td>
+<td id='B56' class='B20' category='general'>Ideal Total Score Goal (4.75), Min. (2.75)</td>
+<td id='C56' class='E12' category='general'></td>
+<td id='D56' class='D56' category='number' format='0.00'></td>
+<td id='E56' class='hidden' category='general'></td>
+<td id='F56' class='hidden' category='general'></td>
+<td id='G56' class='G20' category='general'><input class='button' type='button' value='Calculate' onClick='return recalculate("D49:F55","");' onfocus='return hilite(this.id);' /></td></tr>
+
+<tr id='ROW57' style='height:22px;'>
+<td id='A57' class='A7' category='general'></td>
+<td id='B57' colspan=6 class='B21' category='general'>What does this score means:</td></tr>
+
+<tr id='ROW58' style='height:121px;'>
+<td id='A58' class='A7' category='general'></td>
+<td id='B58' colspan=6 class='B22' category='general'>The competitive factors category is critically important to the idea or innovation market potential.  Scoring high in this category indicates that the idea or innovation has a good market potential.  Scoring low, however, indicates that the idea or innovation have lots of competition and have greater potential of failure.  These factors are considered pivotal in determining the idea or innovation commercial success.  Addressing these factors correctly will result in an understanding product competitiveness and/or market position.  </td></tr>
+
+<tr id='ROW59' style='height:21px;'>
+<td id='A59' class='A1' category='general'></td>
+<td id='B59' class='B59' category='general'></td>
+<td id='C59' class='B59' category='general'></td>
+<td id='D59' class='B59' category='general'></td>
+<td id='E59' class='hidden' category='general'></td>
+<td id='F59' class='hidden' category='general'></td>
+<td id='G59' class='B59' category='general'></td></tr>
+
+<tr id='ROW60' style='height:21px;'>
+<td id='A60' class='A1' category='general'></td>
+<td id='B60' class='B60' category='general'></td>
+<td id='C60' class='B60' category='general'></td>
+<td id='D60' class='B60' category='general'></td>
+<td id='E60' class='hidden' category='general'></td>
+<td id='F60' class='hidden' category='general'></td>
+<td id='G60' class='B60' category='general'></td></tr>
+
+<tr id='ROW61' style='height:22px;'>
+<td id='A61' class='A1' category='general'></td>
+<td id='B61' class='B61' category='general'></td>
+<td id='C61' class='B60' category='general'></td>
+<td id='D61' class='B61' category='general'></td>
+<td id='E61' class='hidden' category='general'></td>
+<td id='F61' class='hidden' category='general'></td>
+<td id='G61' class='B61' category='general'></td></tr>
+
+<tr id='ROW62' style='height:21px;'>
+<td id='A62' class='A7' category='general'></td>
+<td id='B62' class='B7' category='general'>Total Score Recommondation:</td>
+<td id='C62' class='B8' category='general'></td>
+<td id='D62' rowspan=6 class='D62' category='general'>TOTAL<br>SCORE</td>
+<td id='E62' class='hidden' category='general'></td>
+<td id='F62' class='hidden' category='general'></td>
+<td id='G62' rowspan=5 class='G62' category='number' format='0.00'></td></tr>
+
+<tr id='ROW63' style='height:21px;'>
+<td id='A63' class='A7' category='general'></td>
+<td id='B63' class='B8' category='general'>5.00 to 3.99 - recommended for development. </td>
+<td id='C63' class='B8' category='general'></td>
+<td id='E63' class='hidden' category='general'></td>
+<td id='F63' class='hidden' category='general'></td></tr>
+
+<tr id='ROW64' style='height:21px;'>
+<td id='A64' class='A7' category='general'></td>
+<td id='B64' class='B8' category='general'>3.98 to 2.99 - may go forward, conditional on more data</td>
+<td id='C64' class='B8' category='general'></td>
+<td id='E64' class='hidden' category='general'></td>
+<td id='F64' class='hidden' category='general'></td></tr>
+
+<tr id='ROW65' style='height:21px;'>
+<td id='A65' class='A7' category='general'></td>
+<td id='B65' class='B8' category='general'>2.98 to 1.99 - recommended, returns likely modest.</td>
+<td id='C65' class='B8' category='general'></td>
+<td id='E65' class='hidden' category='general'></td>
+<td id='F65' class='hidden' category='general'></td></tr>
+
+<tr id='ROW66' style='height:21px;'>
+<td id='A66' class='A7' category='general'></td>
+<td id='B66' class='B8' category='general'>1.98 to 0.99 - doubtful, further development not recommended</td>
+<td id='C66' class='B8' category='general'></td>
+<td id='E66' class='hidden' category='general'></td>
+<td id='F66' class='hidden' category='general'></td></tr>
+
+<tr id='ROW67' style='height:22px;'>
+<td id='A67' class='A7' category='general'></td>
+<td id='B67' class='B9' category='general'>0.98 to 0.00 - strongly recommend to stop further development.</td>
+<td id='C67' class='B8' category='general'></td>
+<td id='E67' class='hidden' category='general'></td>
+<td id='F67' class='hidden' category='general'></td>
+<td id='G67' class='G20' category='general'><input class='button' type='button' value='Calculate' onClick='return recalculate("E20","E31");' onfocus='return hilite(this.id);' /></td></tr>
+
+<tr id='ROW68' style='height:21px;'>
+<td id='A68' class='A1' category='general'></td>
+<td id='B68' class='B59' category='general'></td>
+<td id='C68' class='B60' category='general'></td>
+<td id='D68' class='B59' category='general'></td>
+<td id='E68' class='hidden' category='general'></td>
+<td id='F68' class='hidden' category='general'></td>
+<td id='G68' class='B59' category='general'></td></tr>
+
+<tr id='ROW69' style='height:22px;'>
+<td id='A69' class='A1' category='general'></td>
+<td id='B69' class='B6' category='general'></td>
+<td id='C69' class='B6' category='general'></td>
+<td id='D69' class='B6' category='general'></td>
+<td id='E69' class='hidden' category='general'></td>
+<td id='F69' class='hidden' category='general'></td>
+<td id='G69' class='B6' category='general'></td></tr>
+
+<tr id='ROW70' style='height:42px;'>
+<td id='A70' class='A7' category='general'></td>
+<td id='B70' colspan=6 class='B70' category='general'>If would like to submit your result for further analysis to our staff, please fill in the info below and click on the send button.</td></tr>
+
+<tr id='ROW71' style='height:21px;'>
+<td id='A71' class='A7' category='general'></td>
+<td id='B71' class='B71' category='general'>Name</td>
+<td id='C71' colspan=5 class='C71' category='general' data-cval=''>
+   <textarea id='iC71' class='iC71' onChange='return calculate("C71")' onfocus='return hilite(this.id);' data-default=''></textarea></td></tr>
+
+<tr id='ROW72' style='height:21px;'>
+<td id='A72' class='A7' category='general'></td>
+<td id='B72' class='B71' category='general'>Email Address</td>
+<td id='C72' colspan=5 class='C71' category='general' data-cval=''>
+   <textarea id='iC72' class='iC71' onChange='return calculate("C72")' onfocus='return hilite(this.id);' data-default=''></textarea></td></tr>
+
+<tr id='ROW73' style='height:21px;'>
+<td id='A73' class='A7' category='general'></td>
+<td id='B73' class='C8' category='general'></td>
+<td id='C73' class='C73' category='general'></td>
+<td id='D73' class='C73' category='general'></td>
+<td id='E73' class='hidden' category='general'></td>
+<td id='F73' class='hidden' category='general'></td>
+<td id='G73' class='G73' category='general'></td></tr>
+
+<tr id='ROW74' style='height:22px;'>
+<td colspan=7 style='text-align:center; border-left:0px; background-color:#FFFFFF; border-right:#000000 solid 2px;'>
+   <input id='C74' class='button' type='button' value='Send' onClick='return submitForm(this.id);' onfocus='return hilite(this.id);' /></td></tr>
+
+<tr id='ROW75' style='height:21px;'>
+<td id='A75' class='A1' category='general'></td>
+<td id='B75' class='B75' category='general'></td>
+<td id='C75' class='C75' category='general'></td>
+<td id='D75' class='B75' category='general'></td>
+<td id='E75' class='hidden' category='general'></td>
+<td id='F75' class='hidden' category='general'></td>
+<td id='G75' class='B75' category='general'></td></tr>
+
+<tr id='ROW76' style='height:21px;'>
+<td id='A76' class='A1' category='general'></td>
+<td id='B76' class='A1' category='general'></td>
+<td id='C76' class='C76' category='general'></td>
+<td id='D76' class='A1' category='general'></td>
+<td id='E76' class='hidden' category='general'></td>
+<td id='F76' class='hidden' category='general'></td>
+<td id='G76' class='A1' category='general'></td></tr></table>
+
+<input type=hidden name='emailTo' />
+<input type=hidden name='emailFrom' />
+<input type=hidden name='emailSubject' />
+<input type=hidden name='emailAttachment' />
+<input type=hidden name='submitMessage' />
+<input type=hidden name='nextPage' />
+<input type=hidden name='formTitle' id='formTitle' value='Evaluation Tool' />
+<input type=hidden name='formHtml' id='formHtml' />
+</form>
+
+<input id='iZZ99' maxlength=0 class='text' onfocus='scroll(0,0);return hilite("iD12");' />
+<div id='InputMessage' class='InputMessage' style='display:none;'></div>
+<div id='CommentImage' class='CommentImage' style='display:none;'></div>
+<div id='FilterMenu'   class='FilterMenu'   style='display:none;'></div>
+<div id='UserMessage'  class='InputMessage' style='display:none; width:100px; height:50px; position:absolute; top:50%; left:50%; margin-left:-50px; margin-top:-25px; text-align:center; line-height:4em;'></div>
+
+<!-- formulas -->
+<object id='fE11' formula='+(0.03125*D11)'></object>
+<object id='fE12' formula='+(0.0357*D12)'></object>
+<object id='fF12' formula='+((1/8)*D12)'></object>
+<object id='fE13' formula='+(0.0357*D13)'></object>
+<object id='fF13' formula='+((1/8)*D13)'></object>
+<object id='fE14' formula='+(0.0357*D14)'></object>
+<object id='fF14' formula='+((1/8)*D14)'></object>
+<object id='fE15' formula='+(0.0357*D15)'></object>
+<object id='fF15' formula='+((1/8)*D15)'></object>
+<object id='fE16' formula='+(0.0357*D16)'></object>
+<object id='fF16' formula='+((1/8)*D16)'></object>
+<object id='fE17' formula='+(0.0357*D17)'></object>
+<object id='fF17' formula='+((1/8)*D17)'></object>
+<object id='fE18' formula='+(0.0357*D18)'></object>
+<object id='fF18' formula='+((1/8)*D18)'></object>
+<object id='fE19' formula='+(0.0357*D19)'></object>
+<object id='fF19' formula='+((1/8)*D19)'></object>
+<object id='fD20' formula='SUM(F12,F13,F14,F15,F16,F17,F18,F19)'></object>
+<object id='fE20' formula='SUM(E12,E13,E14,E15,E16,E17,E18,E19)'></object>
+<object id='fE24' formula='+(0.03125*D24)'></object>
+<object id='fE25' formula='+(0.0357*D25)'></object>
+<object id='fF25' formula='+((1/6)*D25)'></object>
+<object id='fE26' formula='+(0.0357*D26)'></object>
+<object id='fF26' formula='+((1/6)*D26)'></object>
+<object id='fE27' formula='+(0.0357*D27)'></object>
+<object id='fF27' formula='+((1/6)*D27)'></object>
+<object id='fE28' formula='+(0.0357*D28)'></object>
+<object id='fF28' formula='+((1/6)*D28)'></object>
+<object id='fE29' formula='+(0.0357*D29)'></object>
+<object id='fF29' formula='+((1/6)*D29)'></object>
+<object id='fE30' formula='+(0.0357*D30)'></object>
+<object id='fF30' formula='+((1/6)*D30)'></object>
+<object id='fD31' formula='SUM(F25,F26,F27,F28,F29,F30)'></object>
+<object id='fE31' formula='SUM(E25,E26,E27,E28,E29,E30)'></object>
+<object id='fE35' formula='+(0.03125*D35)'></object>
+<object id='fE36' formula='+(0.0357*D36)'></object>
+<object id='fF36' formula='+((1/8)*D36)'></object>
+<object id='fE37' formula='+(0.0357*D37)'></object>
+<object id='fF37' formula='+((1/8)*D37)'></object>
+<object id='fE38' formula='+(0.0357*D38)'></object>
+<object id='fF38' formula='+((1/8)*D38)'></object>
+<object id='fE39' formula='+(0.0357*D39)'></object>
+<object id='fF39' formula='+((1/8)*D39)'></object>
+<object id='fE40' formula='+(0.0357*D40)'></object>
+<object id='fF40' formula='+((1/8)*D40)'></object>
+<object id='fE41' formula='+(0.0357*D41)'></object>
+<object id='fF41' formula='+((1/8)*D41)'></object>
+<object id='fE42' formula='+(0.0357*D42)'></object>
+<object id='fF42' formula='+((1/8)*D42)'></object>
+<object id='fE43' formula='+(0.0357*D43)'></object>
+<object id='fF43' formula='+((1/8)*D43)'></object>
+<object id='fD44' formula='SUM(F36,F37,F38,F39,F40,F41,F42,F43)'></object>
+<object id='fE44' formula='SUM(E36,E37,E38,E39,E40,E41,E42,E43)'></object>
+<object id='fE48' formula='+(0.03125*D48)'></object>
+<object id='fE49' formula='+(0.0357*D49)'></object>
+<object id='fF49' formula='+((1/7)*D49)'></object>
+<object id='fE50' formula='+(0.0357*D50)'></object>
+<object id='fF50' formula='+((1/7)*D50)'></object>
+<object id='fE51' formula='+(0.0357*D51)'></object>
+<object id='fF51' formula='+((1/7)*D51)'></object>
+<object id='fE52' formula='+(0.0357*D52)'></object>
+<object id='fF52' formula='+((1/7)*D52)'></object>
+<object id='fE53' formula='+(0.0357*D53)'></object>
+<object id='fF53' formula='+((1/7)*D53)'></object>
+<object id='fE54' formula='+(0.0357*D54)'></object>
+<object id='fF54' formula='+((1/7)*D54)'></object>
+<object id='fE55' formula='+(0.0357*D55)'></object>
+<object id='fF55' formula='+((1/7)*D55)'></object>
+<object id='fD56' formula='SUM(F49,F50,F51,F52,F53,F54,F55)'></object>
+<object id='fE56' formula='SUM(E49,E50,E51,E52,E53,E54,E55)'></object>
+<object id='fG62' formula='+(E20+E31+E44+E56)'></object>
+
+<!-- dependencies -->
+<object id='dD12' dependents='E12:F12,G20,D20:E20,G62:G67'></object>
+<object id='dE12' dependents='E20,G20,G62:G67'></object>
+<object id='dF12' dependents='D20,G20'></object>
+<object id='dD13' dependents='E13:F13,G20,D20:E20,G62:G67'></object>
+<object id='dE13' dependents='E20,G20,G62:G67'></object>
+<object id='dF13' dependents='D20,G20'></object>
+<object id='dD14' dependents='E14:F14,G20,D20:E20,G62:G67'></object>
+<object id='dE14' dependents='E20,G20,G62:G67'></object>
+<object id='dF14' dependents='D20,G20'></object>
+<object id='dD15' dependents='E15:F15,G20,D20:E20,G62:G67'></object>
+<object id='dE15' dependents='E20,G20,G62:G67'></object>
+<object id='dF15' dependents='D20,G20'></object>
+<object id='dD16' dependents='E16:F16,G20,D20:E20,G62:G67'></object>
+<object id='dE16' dependents='E20,G20,G62:G67'></object>
+<object id='dF16' dependents='D20,G20'></object>
+<object id='dD17' dependents='E17:F17,G20,D20:E20,G62:G67'></object>
+<object id='dE17' dependents='E20,G20,G62:G67'></object>
+<object id='dF17' dependents='D20,G20'></object>
+<object id='dD18' dependents='E18:F18,G20,D20:E20,G62:G67'></object>
+<object id='dE18' dependents='E20,G20,G62:G67'></object>
+<object id='dF18' dependents='D20,G20'></object>
+<object id='dD19' dependents='E19:F19,G20,D20:E20,G62:G67'></object>
+<object id='dE19' dependents='E20,G20,G62:G67'></object>
+<object id='dF19' dependents='D20,G20'></object>
+<object id='dE20' dependents='G62:G67'></object>
+<object id='dD25' dependents='E25:F25,G31,D31:E31,G62:G67'></object>
+<object id='dE25' dependents='E31,G31,G62:G67'></object>
+<object id='dF25' dependents='D31,G31'></object>
+<object id='dD26' dependents='E26:F26,G31,D31:E31,G62:G67'></object>
+<object id='dE26' dependents='E31,G31,G62:G67'></object>
+<object id='dF26' dependents='D31,G31'></object>
+<object id='dD27' dependents='E27:F27,G31,D31:E31,G62:G67'></object>
+<object id='dE27' dependents='E31,G31,G62:G67'></object>
+<object id='dF27' dependents='D31,G31'></object>
+<object id='dD28' dependents='E28:F28,G31,D31:E31,G62:G67'></object>
+<object id='dE28' dependents='E31,G31,G62:G67'></object>
+<object id='dF28' dependents='D31,G31'></object>
+<object id='dD29' dependents='E29:F29,G31,D31:E31,G62:G67'></object>
+<object id='dE29' dependents='E31,G31,G62:G67'></object>
+<object id='dF29' dependents='D31,G31'></object>
+<object id='dD30' dependents='E30:F30,G31,D31:E31,G62:G67'></object>
+<object id='dE30' dependents='E31,G31,G62:G67'></object>
+<object id='dF30' dependents='D31,G31'></object>
+<object id='dE31' dependents='G62:G67'></object>
+<object id='dD36' dependents='E36:F36,G44,D44:E44,G62:G67'></object>
+<object id='dE36' dependents='E44,G44,G62:G67'></object>
+<object id='dF36' dependents='D44,G44'></object>
+<object id='dD37' dependents='E37:F37,G44,D44:E44,G62:G67'></object>
+<object id='dE37' dependents='E44,G44,G62:G67'></object>
+<object id='dF37' dependents='D44,G44'></object>
+<object id='dD38' dependents='E38:F38,G44,D44:E44,G62:G67'></object>
+<object id='dE38' dependents='E44,G44,G62:G67'></object>
+<object id='dF38' dependents='D44,G44'></object>
+<object id='dD39' dependents='E39:F39,G44,D44:E44,G62:G67'></object>
+<object id='dE39' dependents='E44,G44,G62:G67'></object>
+<object id='dF39' dependents='D44,G44'></object>
+<object id='dD40' dependents='E40:F40,G44,D44:E44,G62:G67'></object>
+<object id='dE40' dependents='E44,G44,G62:G67'></object>
+<object id='dF40' dependents='D44,G44'></object>
+<object id='dD41' dependents='E41:F41,G44,D44:E44,G62:G67'></object>
+<object id='dE41' dependents='E44,G44,G62:G67'></object>
+<object id='dF41' dependents='D44,G44'></object>
+<object id='dD42' dependents='E42:F42,G44,D44:E44,G62:G67'></object>
+<object id='dE42' dependents='E44,G44,G62:G67'></object>
+<object id='dF42' dependents='D44,G44'></object>
+<object id='dD43' dependents='E43:F43,G44,D44:E44,G62:G67'></object>
+<object id='dE43' dependents='E44,G44,G62:G67'></object>
+<object id='dF43' dependents='D44,G44'></object>
+<object id='dE44' dependents='G62:G67'></object>
+<object id='dD49' dependents='E49:F49,G56,D56:E56,G62:G67'></object>
+<object id='dE49' dependents='E56,G56,G62:G67'></object>
+<object id='dF49' dependents='D56,G56'></object>
+<object id='dD50' dependents='E50:F50,G56,D56:E56,G62:G67'></object>
+<object id='dE50' dependents='E56,G56,G62:G67'></object>
+<object id='dF50' dependents='D56,G56'></object>
+<object id='dD51' dependents='E51:F51,G56,D56:E56,G62:G67'></object>
+<object id='dE51' dependents='E56,G56,G62:G67'></object>
+<object id='dF51' dependents='D56,G56'></object>
+<object id='dD52' dependents='E52:F52,G56,D56:E56,G62:G67'></object>
+<object id='dE52' dependents='E56,G56,G62:G67'></object>
+<object id='dF52' dependents='D56,G56'></object>
+<object id='dD53' dependents='E53:F53,G56,D56:E56,G62:G67'></object>
+<object id='dE53' dependents='E56,G56,G62:G67'></object>
+<object id='dF53' dependents='D56,G56'></object>
+<object id='dD54' dependents='E54:F54,G56,D56:E56,G62:G67'></object>
+<object id='dE54' dependents='E56,G56,G62:G67'></object>
+<object id='dF54' dependents='D56,G56'></object>
+<object id='dD55' dependents='E55:F55,G56,D56:E56,G62:G67'></object>
+<object id='dE55' dependents='E56,G56,G62:G67'></object>
+<object id='dF55' dependents='D56,G56'></object>
+<object id='dE56' dependents='G62:G67'></object>
+
+<!-- submit info -->
+<object id='sC74' otype='submit' label='Send' emailTo='info@stearring.com' emailFrom='C63' emailSubject='Idea Analysis' emailAttachment='c62' submitMessage='' nextPage=''></object>
+</center>
+<!-- Static Navigation -->
+
+
+<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<!-- 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<!-- <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
+<script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase.min.js?r=2"></script> -->
+
+
+
+
+
+
+
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script> -->
+
+
+
+<script src="https://raw.githubusercontent.com/mrmlnc/material-color/master/material-color.scss">// Make alerts closable
+//$mm.findAll('.alert .close').forEach(c => c.on('click', e => e.target.closest('.alert').remove()))</script>
+
+</body>
+</html>
