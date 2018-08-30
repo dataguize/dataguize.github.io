@@ -25,6 +25,149 @@
 
     /******************************************** LEFT CONTAINER *****************************************/
 
+.content {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.heading {
+  width: 100%;
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: 1.618rem;
+  text-transform: uppercase;
+  letter-spacing: .1ch;
+  line-height: 1;
+  padding-bottom: .5em;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.heading:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+  bottom: 0;
+}
+
+.description {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  color: inherit;
+  cursor: pointer;
+  width: calc(33% - 2rem);
+  min-width: calc(33% - 2rem);
+  height: 400px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 1rem;
+  position: relative;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.front,
+.back {
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+}
+
+.front {
+  background-size: cover;
+  padding: 2rem;
+  font-size: 1.618rem;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+.front:before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+  opacity: .25;
+  z-index: -1;
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even):hover .front {
+  transform: rotateY(-180deg);
+}
+
+.back {
+  background: #fff;
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+.card:nth-child(even) .back {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even):hover .back {
+  transform: rotateY(0deg);
+}
+
+.button {
+  transform: translateZ(40px);
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 100px;
+  font: inherit;
+  background: linear-gradient(135deg, #ccc, #1a57e6);
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+}
+
+
+
+
+
+
     .left-container {}
 
     .menu-box {
@@ -2697,68 +2840,10 @@ If the elements were spans instead of inputs this wouldn't be necessary.
 
         <!--  -->
 
-        <div class="container" style="margin-top: 10vh;">
-          <!-- <h4> </h4> -->
+        
 
-          <div class="row small-up-1 medium-up-2 large-up-3">
-            <div class="column column-block">
-              <div class="card">
-                <a href="#">
-                  <div class="content">
-                    <span class="date" style="font-size: 5vh;">1</span>
-                    <p>Step 1 fill out our questionaire</p>
-                    <span class="read-more">if you had</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="column column-block">
-              <div class="card">
-                <a href="#">
-                  <div class="content">
-                    <span class="date" style="font-size: 5vh;">2</span>
-                    <p>Step 2 ask yourself </p>
-                    <span class="read-more">one shot</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="column column-block">
-              <div class="card">
-                <a href="#">
-                  <div class="content">
-                    <span class="date" style="font-size: 5vh;">3</span>
-                    <p>are you</p>
-                    <span class="read-more">one opportunity</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="column column-block">
-              <div class="card">
-                <a href="#">
-                  <div class="content">
-                    <span class="date" style="font-size: 5vh;">4</span>
-                    <p>the real slim shady?</p>
-                    <span class="read-more">to seize the moment</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="column column-block">
-              <div class="card">
-                <a href="#">
-                  <div class="content">
-                    <span class="date" style="font-size: 5vh;">5</span>
-                    <p>If so please stand up.</p>
-                    <span class="read-more">would you?</span>
-                  </div>
-                </a>
-              </div>
-            </div>
 
-          </div>
-        </div>
+
       </article>
     </main>
 
@@ -2771,9 +2856,11 @@ If the elements were spans instead of inputs this wouldn't be necessary.
 
     <!---->
 
+
     <!--//-->
 
     <footer class="footer">
+      
       <p style="position:relative;bottom: 6vh;">contact us <a href="#">@</a></p>
       <p style="position:relative;bottom: 6vh;">design by <a href="#">Dataguize</a></p>
 
