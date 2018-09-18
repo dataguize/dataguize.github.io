@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Bootstrap and Font Awesome css -->
+     
+
+<title>Dataguize New Client Intake Questionnaire</title>
+
+<style>
+@font-face {
+    font-family: "logieFont";
+    src: url(Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: 'logieDistrict';
+    src: url(DistTh__.otf);
+  }
+
+
+/* Background Elements */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Hind");
+body {
+  background-color: #09334f;
+  background-image: linear-gradient(to bottom, #09334f, #ffffff);
+  background-repeat: repeat-x;
+  min-height: 100vmin;
+  min-width: 100vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 20.8px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 12.8px;
+}
+.baseintro {
+  background: #fff;
+  max-width: 1000px;
+  flex: 0 1 auto;
+  box-shadow: -40px 30px 100px 0px #09334f;
+}
+.baseintro__header {
+  background: #09334f;
+  padding: 2% 5%;
+  color: #fff;
+}
+.baseintro__title {
+  font-family: "Hind", sans-serif;
+}
+.baseform__title {
+  font-family: "Hind", sans-serif;
+}
+.baseform__para {
+  color: #fff;
+}
+.baseform__set {
+  padding: 2% 5%;
+}
+/* Reusable Components */
+/* 01. Shrinking Labels */
+.baseform__set--shrinkinglabels .baseform__label {
+  display: block;
+  padding-top: 30px;
+  text-align: left;
+}
+.baseform__set--shrinkinglabels .baseform__label .baseform__txtlabel {
+  cursor: text;
+  font-size: 22px;
+  -webkit-transform: translateY(-34px);
+          transform: translateY(-34px);
+  transition: all 0.3s;
+}
+.baseform__set--shrinkinglabels .baseform__label .baseform__txtinput {
+  width: 60%;
+  font-size: 22px;
+  background: transparent;
+  padding: 5px 15px 5px 50px;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid #09334f;
+  transition: all 0.3s;
+}
+.baseform__set--shrinkinglabels .baseform__label .baseform__txtinput:focus + .baseform__txtlabel {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  font-size: 15px;
+}
+.baseform__set--shrinkinglabels .baseform__label .baseform__txtinput:valid + .baseform__txtlabel {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  font-size: 15px;
+}
+/* 02. Positive Feedback */
+.  .baseform__txtinput:valid {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+.  .baseform__txtinput:valid + label {
+  opacity: 0;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<div class="baseintro">
+  <header class="baseintro__header" style="background-color: #09334f;">
+    <h1 class="baseintro__title">CMI NOVACAST</h1>
+    <p class="baseintro__para">Dataguize Client Questionnaire  <span style="font-size: 1.75vh;color: #ccc;">**Please answer each question to the best of your ability</span></p>
+  </header>
+  <form action="/contact-success.html" method="post" class="contact-form ">
+      <input type="hidden" name="_to" value="dataguize@gmail.com">
+      <input type="text" name="_gotcha" style="display: none;">
+    <!-- 01. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels">
+      <h2 class="baseform__title--subset">01. What is your name?</h2>
+      <p class="baseform__para--subset">Please provide your full name</p>
+      <label class="baseform__label"> 
+        <input class="baseform__txtinput" type="text" required="required" type="name" name="name" id="namez" placeholder="" required/>
+        <div class="baseform__txtlabel">Type your name here</div>
+      </label>
+    </div>
+    <!-- 02. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels baseform__set--validpositive ">
+      <h2 class="baseform__title--subset">02. What is your email address?</h2>
+      <p class="baseform__para--subset">Please enter your current email.</p>
+      <label class="baseform__label"> 
+        <input class="baseform__txtinput" type="text"  name="email" id="email" placeholder=" " required="required"/>
+        <div class="baseform__txtlabel">Email@email.com</div>
+      </label>
+    </div>
+    <!-- 03. 'Negitive' Feedback - Give Them Details-->
+     <!-- 03. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels ">
+      <h2 class="baseform__title--subset">03. Please briefly describe your business, what services you offer, how and where you operate and who your customers are.</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">We need to know about your business to build a website for it. Each service you offer will typically have it’s own page(s) on your website. It is also helpful to know what your unique selling points are and why potential customers should choose you over your competitors.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="descBiz" id="descBiz" type="text" rows='10' cols="30" placeholder="Please describe here"  required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 03. 'Negitive' Feedback - Give Them Details-->
+
+     <!-- 04. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">04. Describe how you currently advertise/attract new customers.</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">A new website is a fantastic advertising tool in its self but it will also compliment and be complimented by any other advertising you do. Understanding your current advertising will help us know where we are pitching your website.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="descAds" id="descAds" type="text" rows='10' cols="30" placeholder="Please describe here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 04. 'Negitive' Feedback - Give Them Details-->
+    <!-- 05. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">05. Do you have a logo and/or established image and branding guidelines e.g. fonts, colour schemes etc?</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">A consistent image is important for a business. If you already have a logo and style then these will inform the design of your website. If you do not then they will need to be designed as part of the web design process.
+Dataguize offer a comprehensive Logo, Signage and Printed Media design service to create the perfect consistent image for your business.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="brandId" id="brandId" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 05. 'Negitive' Feedback - Give Them Details-->
+     <!-- 06. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">06. Please list your top (up to 5) competitors (and their websites if applicable)</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">With knowledge of your competitors and their websites we can identify niches in the market for your website to exploit and ensure that where it does compete head-to-head it has the advantage.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="compet" id="compet" type="text" rows='10' cols="30" placeholder="Please list 5 competitors" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 06. 'Negitive' Feedback - Give Them Details-->
+
+    <!-- 07. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">07. Please briefly explain why you want a new website and how it will benefit your business.</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">A website can serve any of a number of purposes and fulfill a multitude of functions depending on the nature of your business and what it offers. We need to know what the aim of your website will be in order to build it to achieve its goals.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="explainwhy" id="explainwhy" type="text" rows='10' cols="30" placeholder="Please explain here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 07. 'Negitive' Feedback - Give Them Details-->
+
+    <!-- 08. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">08. What is your budget for your new website?</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">Budget can be a sensitive area and we respect that costs should be kept as low as possible while achieving what is required. However, an idea of budget will enable us to steer you towards the most appropriate type of website for your business.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="budget" id="budget" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 08. 'Negitive' Feedback - Give Them Details-->
+
+    <!-- 09. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">09. What is your deadline for getting the new website live?</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">This gives us a target to work towards and helps us prioritize our work.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput"  name="deadline" id="deadline" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 09. 'Negitive' Feedback - Give Them Details-->
+
+    <!-- 10. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">10. If you were looking for your business in a search engine (e.g. Google) what words/phrases would you search for?</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">Identifying the right key words and phrases is important as these will form the basis of the search engine optimisation of your website. We use SEO to get your site to come up near the top of the search results for your chosen keywords to help your customers find your website. Let us know the most important words and phrases (in order).
+Dataguize offers a keyword research service where we identify the most appropriate words and phrases for the SEO of your website based upon actual search data.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="phraseSeo" id="phraseSeo" type="text" rows='10' cols="30" placeholder="Please enter your keywords" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 10. 'Negitive' Feedback - Give Them Details-->
+
+     <!-- 11. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">11. Do you already have an idea of what you want your website to look like - can you provide images/examples?</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">If you have any design ideas or general guidelines/pointers you want us to follow or even a completed website layout design you want to use then we would be happy to base the design of your website around them.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="ideaweb" id="ideaweb" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 11. 'Negitive' Feedback - Give Them Details-->
+
+     <!-- 12. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">12. Please list 5 websites that you like (or would like your website to look something like).
+</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">It is helpful to know what sort of websites you like and what you like about them so that we can ensure that we design you a website that you will also like.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="looklike" id="looklike" type="text" rows='10' cols="30" placeholder="Please list 5 websites that you like" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 12. 'Negitive' Feedback - Give Them Details-->
+
+     <!-- 13. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">13. Do you want us to setup any social networking pages for you? If so which?</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">Dataguize offers a complete social media design service for Facebook and Twitter. We get your pages setup and ready to go so that you can concentrate on dealing will all the new customers you will have. We can also setup blogs too.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="socials" id="socials" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 13. 'Negitive' Feedback - Give Them Details-->
+
+    <!-- 14. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">14. Do you want to include share/like buttons for the popular social networking pages on each page of your site? Which ones?</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">Social bookmarks are a powerful tool in marketing your website by allowing 1 click linking to your site for your visitors.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput"  name="likebutton" id="likebutton" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 14. 'Negitive' Feedback - Give Them Details-->
+
+    <!-- 15. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">15. Please detail anything that you specifically do not want to have on your website.</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">This can help ensure we only design what you want for your website.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput" name="specifics" id="specifics" type="text" rows='10' cols="30" placeholder="Please enter text here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 15. 'Negitive' Feedback - Give Them Details-->
+
+    <!-- 16. Shrinking Labels-->
+    <div class="baseform__set baseform__set--shrinkinglabels  ">
+      <h2 class="baseform__title--subset">16. How often will your site be updated and will there be frequent updates (every week?, month? year?)</h2>
+      <p class="baseform__para--subset" style="font-size: 1em;">Websites are programmed in html and other code and are not normally updatable by their owners unless they have some web design knowledge. However, a website can be designed with a Content Management System (CMS) to allow authorised users a secure way of adding and updating content with no web design knowledge.
+Dataguize offers a complete website maintenance and updating service for all our web design clients. We will make any updates that you require for your website.</p>
+      <label class="baseform__label"> 
+        <textarea style="-moz-box-shadow: 1px 1px 4px 1px #09334f;
+    -webkit-box-shadow: 1px 1px 4px 1px #09334f ;
+    box-shadow: 1px 1px 4px 1px  #09334f;border: 2px solid #09334f;" class="baseform__txtinput"  type="text" rows='10' cols="30"  name="crm" id="crm" placeholder="Please enter text here" required="required"/></textarea>
+        <!-- <textarea class="baseform__txtlabel" >type here</textarea> -->
+      </label>
+    </div>
+    <!-- 16. 'Negitive' Feedback - Give Them Details-->
+    <br>
+    <br>
+     <input type="submit" value="Submit My Answers" style='font-size:3.2vh;margin-left:33%;'>
+     <br><br>
+
+  </form>
+</div>
+<div id="logotho"><img src="https://s3.amazonaws.com/uploads.hipchat.com/697967/4899719/I6dmKeUR5YSx4Pe/dgfinalfinal6.png" alt="logo" style='padding:7px 5px 7px 5px;position:fixed;bottom:7px;left:0' width='120px' height='auto'></div>
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<!-- <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
+<script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase.min.js?r=2"></script> -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
